@@ -97,17 +97,17 @@ const DocumentationPage = () => {
   return (
     <div className="space-y-8">
       <div className="text-center space-y-4">
-        <h1 className="text-3xl md:text-4xl font-bold text-gray-900">
+        <h1 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
           AWS Services Documentation
         </h1>
-        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+        <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
           Comprehensive guide to major AWS services with key features, use cases, and pricing information
         </p>
       </div>
 
       <div className="space-y-4">
         <div className="relative max-w-md mx-auto">
-          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
+          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 dark:text-gray-500 w-4 h-4" />
           <Input
             type="text"
             placeholder="Search AWS services..."
@@ -145,14 +145,14 @@ const DocumentationPage = () => {
                     </Badge>
                   </div>
                 </div>
-                <ExternalLink className="w-4 h-4 text-gray-400" />
+                <ExternalLink className="w-4 h-4 text-gray-400 dark:text-gray-500" />
               </div>
               <CardDescription>{service.description}</CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
               <div>
-                <h4 className="font-medium text-gray-900 mb-2">Key Features:</h4>
-                <ul className="text-sm text-gray-600 space-y-1">
+                <h4 className="font-medium text-gray-900 dark:text-white mb-2">Key Features:</h4>
+                <ul className="text-sm text-gray-600 dark:text-gray-300 space-y-1">
                   {service.keyFeatures.map((feature, idx) => (
                     <li key={idx}>• {feature}</li>
                   ))}
@@ -160,7 +160,7 @@ const DocumentationPage = () => {
               </div>
 
               <div>
-                <h4 className="font-medium text-gray-900 mb-2">Common Use Cases:</h4>
+                <h4 className="font-medium text-gray-900 dark:text-white mb-2">Common Use Cases:</h4>
                 <div className="flex flex-wrap gap-1">
                   {service.useCases.map((useCase, idx) => (
                     <Badge key={idx} variant="outline" className="text-xs">
@@ -171,8 +171,8 @@ const DocumentationPage = () => {
               </div>
 
               <div>
-                <h4 className="font-medium text-gray-900 mb-1">Pricing:</h4>
-                <p className="text-sm text-gray-600">{service.pricing}</p>
+                <h4 className="font-medium text-gray-900 dark:text-white mb-1">Pricing:</h4>
+                <p className="text-sm text-gray-600 dark:text-gray-300">{service.pricing}</p>
               </div>
             </CardContent>
           </Card>
@@ -181,17 +181,17 @@ const DocumentationPage = () => {
 
       {filteredServices.length === 0 && (
         <div className="text-center py-12">
-          <Book className="w-12 h-12 text-gray-400 mx-auto mb-4" />
-          <h3 className="text-lg font-medium text-gray-900 mb-2">No services found</h3>
-          <p className="text-gray-600">Try adjusting your search or filter criteria</p>
+          <Book className="w-12 h-12 text-gray-400 dark:text-gray-500 mx-auto mb-4" />
+          <h3 className="text-lg font-medium text-gray-900 dark:text-white mb-2">No services found</h3>
+          <p className="text-gray-600 dark:text-gray-300">Try adjusting your search or filter criteria</p>
         </div>
       )}
 
-      <Card className="bg-blue-50 border-blue-200">
+      <Card className="bg-blue-50 dark:bg-blue-900/20 border-blue-200 dark:border-blue-800">
         <CardHeader>
-          <CardTitle className="text-blue-800">Study Resources</CardTitle>
+          <CardTitle className="text-blue-800 dark:text-blue-300">Study Resources</CardTitle>
         </CardHeader>
-        <CardContent className="text-blue-700">
+        <CardContent className="text-blue-700 dark:text-blue-300">
           <ul className="space-y-2 text-sm">
             <li>• AWS Official Documentation: Comprehensive guides for each service</li>
             <li>• AWS Well-Architected Framework: Best practices for cloud architecture</li>

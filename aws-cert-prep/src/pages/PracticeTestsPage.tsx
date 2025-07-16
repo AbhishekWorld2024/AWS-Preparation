@@ -37,16 +37,32 @@ const PracticeTestsPage = () => {
         'Secure Applications',
         'Cost-Optimized Architectures'
       ]
+    },
+    {
+      id: 'aws-developer',
+      title: 'AWS Certified Developer - Associate',
+      level: 'Advanced',
+      description: 'Associate level certification for developing and maintaining applications on the AWS platform.',
+      duration: '130 minutes',
+      questions: 65,
+      passingScore: '72%',
+      color: 'bg-purple-500',
+      topics: [
+        'Development with AWS Services',
+        'Security',
+        'Deployment',
+        'Troubleshooting and Optimization'
+      ]
     }
   ]
 
   return (
     <div className="space-y-8">
       <div className="text-center space-y-4">
-        <h1 className="text-3xl md:text-4xl font-bold text-gray-900">
+        <h1 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
           AWS Practice Tests
         </h1>
-        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+        <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
           Choose your certification path and start practicing with our comprehensive question banks
         </p>
       </div>
@@ -73,25 +89,25 @@ const PracticeTestsPage = () => {
             <CardContent className="space-y-6">
               <div className="grid grid-cols-2 gap-4 text-sm">
                 <div className="flex items-center space-x-2">
-                  <Clock className="w-4 h-4 text-gray-500" />
-                  <span>{category.duration}</span>
+                  <Clock className="w-4 h-4 text-gray-500 dark:text-gray-400" />
+                  <span className="text-gray-700 dark:text-gray-300">{category.duration}</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <FileText className="w-4 h-4 text-gray-500" />
-                  <span>{category.questions} questions</span>
+                  <FileText className="w-4 h-4 text-gray-500 dark:text-gray-400" />
+                  <span className="text-gray-700 dark:text-gray-300">{category.questions} questions</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <TrendingUp className="w-4 h-4 text-gray-500" />
-                  <span>{category.passingScore} to pass</span>
+                  <TrendingUp className="w-4 h-4 text-gray-500 dark:text-gray-400" />
+                  <span className="text-gray-700 dark:text-gray-300">{category.passingScore} to pass</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <Users className="w-4 h-4 text-gray-500" />
-                  <span>Multiple choice</span>
+                  <Users className="w-4 h-4 text-gray-500 dark:text-gray-400" />
+                  <span className="text-gray-700 dark:text-gray-300">Multiple choice</span>
                 </div>
               </div>
 
               <div>
-                <h4 className="font-medium text-gray-900 mb-2">Key Topics Covered:</h4>
+                <h4 className="font-medium text-gray-900 dark:text-white mb-2">Key Topics Covered:</h4>
                 <div className="flex flex-wrap gap-2">
                   {category.topics.map((topic, index) => (
                     <Badge key={index} variant="outline" className="text-xs">
@@ -104,11 +120,11 @@ const PracticeTestsPage = () => {
               <div className="space-y-2">
                 <Button asChild className="w-full">
                   <Link to={`/test/${category.id}`}>
-                    Start Practice Test
+                    Start Practice Test (20 Exams Available)
                   </Link>
                 </Button>
-                <p className="text-xs text-gray-500 text-center">
-                  Realistic exam simulation with timer and detailed explanations
+                <p className="text-xs text-gray-500 dark:text-gray-400 text-center">
+                  20 practice exams with realistic simulation, timer and detailed explanations
                 </p>
               </div>
             </CardContent>
@@ -116,11 +132,11 @@ const PracticeTestsPage = () => {
         ))}
       </div>
 
-      <Card className="bg-orange-50 border-orange-200">
+      <Card className="bg-orange-50 dark:bg-orange-900/20 border-orange-200 dark:border-orange-800">
         <CardHeader>
-          <CardTitle className="text-orange-800">Study Tips</CardTitle>
+          <CardTitle className="text-orange-800 dark:text-orange-300">Study Tips</CardTitle>
         </CardHeader>
-        <CardContent className="text-orange-700">
+        <CardContent className="text-orange-700 dark:text-orange-300">
           <ul className="space-y-2 text-sm">
             <li>• Take practice tests multiple times to identify weak areas</li>
             <li>• Review explanations for both correct and incorrect answers</li>

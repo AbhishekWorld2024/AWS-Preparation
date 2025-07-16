@@ -22,7 +22,9 @@ const TestPage = () => {
   const [isTestCompleted, setIsTestCompleted] = useState(false)
   const [showResults, setShowResults] = useState(false)
 
-  const questions = testQuestions[category as keyof typeof testQuestions] || []
+  const [selectedExam, setSelectedExam] = useState<string>('exam-1')
+  const categoryQuestions = testQuestions[category as keyof typeof testQuestions]
+  const questions = categoryQuestions?.[selectedExam] || []
   const testDuration = category === 'cloud-practitioner' ? 90 * 60 : 130 * 60 // in seconds
 
   useEffect(() => {
@@ -84,11 +86,11 @@ const TestPage = () => {
 
   const currentQuestion = questions[currentQuestionIndex]
 
-  if (!questions.length) {
+  if (!categoryQuestions) {
     return (
       <div className="text-center py-12">
-        <h2 className="text-2xl font-bold text-gray-900 mb-4">Test Not Found</h2>
-        <p className="text-gray-600 mb-6">The requested test category could not be found.</p>
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Test Not Found</h2>
+        <p className="text-gray-600 dark:text-gray-300 mb-6">The requested test category could not be found.</p>
         <Button onClick={() => navigate('/practice-tests')}>
           <ArrowLeft className="w-4 h-4 mr-2" />
           Back to Practice Tests
@@ -98,6 +100,8 @@ const TestPage = () => {
   }
 
   if (!isTestStarted) {
+    const availableExams = Object.keys(categoryQuestions)
+    
     return (
       <div className="max-w-2xl mx-auto space-y-6">
         <Button
@@ -114,29 +118,50 @@ const TestPage = () => {
             <CardTitle className="text-2xl">
               {category === 'cloud-practitioner' 
                 ? 'AWS Certified Cloud Practitioner' 
-                : 'AWS Certified Solutions Architect - Associate'}
+                : category === 'solutions-architect'
+                ? 'AWS Certified Solutions Architect - Associate'
+                : 'AWS Certified Developer - Associate'}
             </CardTitle>
             <CardDescription>
               {category === 'cloud-practitioner' 
                 ? 'Foundational level certification covering basic AWS cloud concepts'
-                : 'Associate level certification for designing distributed systems on AWS'}
+                : category === 'solutions-architect'
+                ? 'Associate level certification for designing distributed systems on AWS'
+                : 'Associate level certification for developing applications on AWS'}
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-6">
-            <div className="grid grid-cols-2 gap-4 text-sm">
-              <div className="flex items-center space-x-2">
-                <Clock className="w-4 h-4 text-gray-500" />
-                <span>{category === 'cloud-practitioner' ? '90 minutes' : '130 minutes'}</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <span className="w-4 h-4 text-gray-500">#</span>
-                <span>{questions.length} questions</span>
+            <div>
+              <h3 className="font-medium text-gray-900 dark:text-white mb-3">Select Practice Exam:</h3>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
+                {availableExams.map((examId) => (
+                  <Button
+                    key={examId}
+                    variant={selectedExam === examId ? "default" : "outline"}
+                    size="sm"
+                    onClick={() => setSelectedExam(examId)}
+                    className="text-xs"
+                  >
+                    {examId.replace('-', ' ').replace(/\b\w/g, l => l.toUpperCase())}
+                  </Button>
+                ))}
               </div>
             </div>
 
-            <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
-              <h3 className="font-medium text-yellow-800 mb-2">Test Instructions:</h3>
-              <ul className="text-sm text-yellow-700 space-y-1">
+            <div className="grid grid-cols-2 gap-4 text-sm">
+              <div className="flex items-center space-x-2">
+                <Clock className="w-4 h-4 text-gray-500 dark:text-gray-400" />
+                <span className="text-gray-700 dark:text-gray-300">{category === 'cloud-practitioner' ? '90 minutes' : '130 minutes'}</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <span className="w-4 h-4 text-gray-500 dark:text-gray-400">#</span>
+                <span className="text-gray-700 dark:text-gray-300">{questions.length} questions</span>
+              </div>
+            </div>
+
+            <div className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg p-4">
+              <h3 className="font-medium text-yellow-800 dark:text-yellow-300 mb-2">Test Instructions:</h3>
+              <ul className="text-sm text-yellow-700 dark:text-yellow-300 space-y-1">
                 <li>• Choose the best answer for each question</li>
                 <li>• You can bookmark questions for review</li>
                 <li>• Navigate between questions using the arrow buttons</li>
@@ -145,7 +170,12 @@ const TestPage = () => {
               </ul>
             </div>
 
-            <Button onClick={startTest} className="w-full" size="lg">
+            <Button 
+              onClick={startTest} 
+              className="w-full" 
+              size="lg"
+              disabled={!questions.length}
+            >
               Start Practice Test
             </Button>
           </CardContent>
@@ -153,6 +183,7 @@ const TestPage = () => {
       </div>
     )
   }
+
 
   if (showResults) {
     const score = calculateScore()
@@ -166,13 +197,15 @@ const TestPage = () => {
             <CardDescription>
               {category === 'cloud-practitioner' 
                 ? 'AWS Certified Cloud Practitioner' 
-                : 'AWS Certified Solutions Architect - Associate'}
+                : category === 'solutions-architect'
+                ? 'AWS Certified Solutions Architect - Associate'
+                : 'AWS Certified Developer - Associate'}
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-6">
             <div className="text-center space-y-4">
-              <div className="text-6xl font-bold text-gray-900">{score}%</div>
-              <div className="text-lg text-gray-600">
+              <div className="text-6xl font-bold text-gray-900 dark:text-white">{score}%</div>
+              <div className="text-lg text-gray-600 dark:text-gray-300">
                 {correctAnswers} out of {questions.length} questions correct
               </div>
               <Badge 
@@ -186,15 +219,15 @@ const TestPage = () => {
             <div className="grid grid-cols-3 gap-4 text-center">
               <div>
                 <div className="text-2xl font-bold text-green-600">{correctAnswers}</div>
-                <div className="text-sm text-gray-600">Correct</div>
+                <div className="text-sm text-gray-600 dark:text-gray-300">Correct</div>
               </div>
               <div>
                 <div className="text-2xl font-bold text-red-600">{questions.length - correctAnswers}</div>
-                <div className="text-sm text-gray-600">Incorrect</div>
+                <div className="text-sm text-gray-600 dark:text-gray-300">Incorrect</div>
               </div>
               <div>
                 <div className="text-2xl font-bold text-gray-600">{questions.length}</div>
-                <div className="text-sm text-gray-600">Total</div>
+                <div className="text-sm text-gray-600 dark:text-gray-300">Total</div>
               </div>
             </div>
 
@@ -219,7 +252,7 @@ const TestPage = () => {
         </Card>
 
         <div className="space-y-4">
-          <h3 className="text-xl font-bold">Question Review</h3>
+          <h3 className="text-xl font-bold text-gray-900 dark:text-white">Question Review</h3>
           {questions.map((question, index) => {
             const userAnswer = selectedAnswers[index]
             const isCorrect = userAnswer === question.correctAnswer
@@ -290,8 +323,8 @@ const TestPage = () => {
         
         <div className="flex items-center space-x-4">
           <div className="flex items-center space-x-2">
-            <Clock className="w-4 h-4 text-gray-500" />
-            <span className="font-mono text-lg">{formatTime(timeRemaining)}</span>
+            <Clock className="w-4 h-4 text-gray-500 dark:text-gray-400" />
+            <span className="font-mono text-lg text-gray-900 dark:text-white">{formatTime(timeRemaining)}</span>
           </div>
           <Badge variant="outline">
             {currentQuestionIndex + 1} of {questions.length}
@@ -330,9 +363,9 @@ const TestPage = () => {
             onValueChange={(value) => handleAnswerSelect(currentQuestionIndex, parseInt(value))}
           >
             {currentQuestion.options.map((option, index) => (
-              <div key={index} className="flex items-start space-x-3 p-3 rounded-lg border hover:bg-gray-50">
+              <div key={index} className="flex items-start space-x-3 p-3 rounded-lg border hover:bg-gray-50 dark:hover:bg-gray-800">
                 <RadioGroupItem value={index.toString()} id={`option-${index}`} className="mt-1" />
-                <Label htmlFor={`option-${index}`} className="flex-1 cursor-pointer">
+                <Label htmlFor={`option-${index}`} className="flex-1 cursor-pointer text-gray-900 dark:text-white">
                   <span className="font-medium mr-2">{String.fromCharCode(65 + index)}.</span>
                   {option}
                 </Label>

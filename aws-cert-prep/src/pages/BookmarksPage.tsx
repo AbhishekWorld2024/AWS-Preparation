@@ -12,7 +12,7 @@ const BookmarksPage = () => {
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedCategory, setSelectedCategory] = useState('All')
 
-  const categories = ['All', 'cloud-practitioner', 'solutions-architect']
+  const categories = ['All', 'cloud-practitioner', 'solutions-architect', 'aws-developer']
   
   const filteredQuestions = bookmarkedQuestions.filter(question => {
     const matchesSearch = question.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -27,6 +27,8 @@ const BookmarksPage = () => {
         return 'Cloud Practitioner'
       case 'solutions-architect':
         return 'Solutions Architect'
+      case 'aws-developer':
+        return 'Developer'
       default:
         return category
     }
@@ -46,10 +48,10 @@ const BookmarksPage = () => {
   return (
     <div className="space-y-8">
       <div className="text-center space-y-4">
-        <h1 className="text-3xl md:text-4xl font-bold text-gray-900">
+        <h1 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
           Bookmarked Questions
         </h1>
-        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+        <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
           Review your saved questions and continue studying
         </p>
       </div>
@@ -58,12 +60,12 @@ const BookmarksPage = () => {
         <Card className="text-center py-12">
           <CardContent>
             <div className="space-y-4">
-              <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto">
-                <BookmarkX className="w-8 h-8 text-gray-400" />
+              <div className="w-16 h-16 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center mx-auto">
+                <BookmarkX className="w-8 h-8 text-gray-400 dark:text-gray-500" />
               </div>
               <div>
-                <h3 className="text-lg font-medium text-gray-900 mb-2">No bookmarked questions yet</h3>
-                <p className="text-gray-600 mb-6">
+                <h3 className="text-lg font-medium text-gray-900 dark:text-white mb-2">No bookmarked questions yet</h3>
+                <p className="text-gray-600 dark:text-gray-300 mb-6">
                   Start taking practice tests and bookmark questions you want to review later
                 </p>
                 <Button asChild>
@@ -80,7 +82,7 @@ const BookmarksPage = () => {
         <>
           <div className="space-y-4">
             <div className="relative max-w-md mx-auto">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 dark:text-gray-500 w-4 h-4" />
               <Input
                 type="text"
                 placeholder="Search bookmarked questions..."
@@ -103,7 +105,7 @@ const BookmarksPage = () => {
               ))}
             </div>
 
-            <div className="text-center text-sm text-gray-600">
+            <div className="text-center text-sm text-gray-600 dark:text-gray-300">
               Showing {filteredQuestions.length} of {bookmarkedQuestions.length} bookmarked questions
             </div>
           </div>
@@ -119,7 +121,7 @@ const BookmarksPage = () => {
                           {getCategoryDisplayName(question.category)}
                         </Badge>
                         <div className={`w-2 h-2 rounded-full ${getDifficultyColor(question.difficulty)}`} />
-                        <span className="text-xs text-gray-500 capitalize">{question.difficulty}</span>
+                        <span className="text-xs text-gray-500 dark:text-gray-400 capitalize">{question.difficulty}</span>
                       </div>
                       <CardTitle className="text-lg">Question {index + 1}</CardTitle>
                       <CardDescription className="mt-2 text-base leading-relaxed">
@@ -138,21 +140,21 @@ const BookmarksPage = () => {
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div className="space-y-2">
-                    <h4 className="font-medium text-gray-900">Answer Options:</h4>
+                    <h4 className="font-medium text-gray-900 dark:text-white">Answer Options:</h4>
                     {question.options.map((option, optionIndex) => (
                       <div 
                         key={optionIndex}
                         className={`p-2 rounded border ${
                           optionIndex === question.correctAnswer 
-                            ? 'bg-green-50 border-green-200' 
-                            : 'bg-gray-50 border-gray-200'
+                            ? 'bg-green-50 dark:bg-green-900/20 border-green-200 dark:border-green-800' 
+                            : 'bg-gray-50 dark:bg-gray-800 border-gray-200 dark:border-gray-700'
                         }`}
                       >
                         <div className="flex items-center space-x-2">
                           <span className="font-medium">
                             {String.fromCharCode(65 + optionIndex)}.
                           </span>
-                          <span>{option}</span>
+                          <span className="text-gray-900 dark:text-white">{option}</span>
                           {optionIndex === question.correctAnswer && (
                             <Badge variant="default" className="ml-auto">Correct Answer</Badge>
                           )}
@@ -161,9 +163,9 @@ const BookmarksPage = () => {
                     ))}
                   </div>
                   
-                  <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-                    <h4 className="font-medium text-blue-800 mb-2">Explanation:</h4>
-                    <p className="text-blue-700 text-sm">{question.explanation}</p>
+                  <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
+                    <h4 className="font-medium text-blue-800 dark:text-blue-300 mb-2">Explanation:</h4>
+                    <p className="text-blue-700 dark:text-blue-300 text-sm">{question.explanation}</p>
                   </div>
 
                   <div className="flex justify-end">
@@ -181,9 +183,9 @@ const BookmarksPage = () => {
 
           {filteredQuestions.length === 0 && searchQuery && (
             <div className="text-center py-12">
-              <Search className="w-12 h-12 text-gray-400 mx-auto mb-4" />
-              <h3 className="text-lg font-medium text-gray-900 mb-2">No questions found</h3>
-              <p className="text-gray-600">Try adjusting your search or filter criteria</p>
+              <Search className="w-12 h-12 text-gray-400 dark:text-gray-500 mx-auto mb-4" />
+              <h3 className="text-lg font-medium text-gray-900 dark:text-white mb-2">No questions found</h3>
+              <p className="text-gray-600 dark:text-gray-300">Try adjusting your search or filter criteria</p>
             </div>
           )}
         </>

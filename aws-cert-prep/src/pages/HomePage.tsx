@@ -43,17 +43,25 @@ const HomePage = () => {
       color: 'bg-blue-500',
       questions: '65 Questions',
       duration: '130 Minutes'
+    },
+    {
+      title: 'AWS Certified Developer - Associate',
+      level: 'Advanced Level',
+      description: 'Develop and maintain applications on the AWS platform',
+      color: 'bg-purple-500',
+      questions: '65 Questions',
+      duration: '130 Minutes'
     }
   ]
 
   return (
     <div className="space-y-12">
       <section className="text-center space-y-6">
-        <h1 className="text-4xl md:text-6xl font-bold text-gray-900">
-          Master AWS Certifications
+        <h1 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white">
+          AWS Exam Prep - Master AWS Certifications
         </h1>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Prepare for your AWS certification exams with comprehensive practice tests, 
+        <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          Prepare for your AWS certification exams with 60 comprehensive practice tests, 
           detailed explanations, and extensive documentation covering all major AWS services.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -84,13 +92,13 @@ const HomePage = () => {
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
-              <p className="text-gray-600">{cert.description}</p>
-              <div className="flex justify-between text-sm text-gray-500">
+              <p className="text-gray-600 dark:text-gray-300">{cert.description}</p>
+              <div className="flex justify-between text-sm text-gray-500 dark:text-gray-400">
                 <span>{cert.questions}</span>
                 <span>{cert.duration}</span>
               </div>
               <Button asChild className="w-full">
-                <Link to={`/test/${cert.title.includes('Cloud Practitioner') ? 'cloud-practitioner' : 'solutions-architect'}`}>
+                <Link to={`/test/${cert.title.includes('Cloud Practitioner') ? 'cloud-practitioner' : cert.title.includes('Solutions Architect') ? 'solutions-architect' : 'aws-developer'}`}>
                   Start Practice Test
                 </Link>
               </Button>
@@ -100,15 +108,15 @@ const HomePage = () => {
       </section>
 
       <section>
-        <h2 className="text-3xl font-bold text-center mb-8">Why Choose Our Platform?</h2>
+        <h2 className="text-3xl font-bold text-center mb-8 text-gray-900 dark:text-white">Why Choose Our Platform?</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((feature, index) => {
             const Icon = feature.icon
             return (
               <Card key={index} className="text-center">
                 <CardHeader>
-                  <div className="mx-auto w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
-                    <Icon className="w-6 h-6 text-orange-600" />
+                  <div className="mx-auto w-12 h-12 bg-orange-100 dark:bg-orange-900/20 rounded-lg flex items-center justify-center">
+                    <Icon className="w-6 h-6 text-orange-600 dark:text-orange-400" />
                   </div>
                   <CardTitle className="text-lg">{feature.title}</CardTitle>
                 </CardHeader>

@@ -12,7 +12,7 @@ const BookmarksPage = () => {
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedCategory, setSelectedCategory] = useState('All')
 
-  const categories = ['All', 'cloud-practitioner', 'solutions-architect', 'aws-developer']
+  const categories = ['All', 'cloud-practitioner', 'solutions-architect']
   
   const filteredQuestions = bookmarkedQuestions.filter(question => {
     const matchesSearch = question.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -27,8 +27,6 @@ const BookmarksPage = () => {
         return 'Cloud Practitioner'
       case 'solutions-architect':
         return 'Solutions Architect'
-      case 'aws-developer':
-        return 'Developer'
       default:
         return category
     }

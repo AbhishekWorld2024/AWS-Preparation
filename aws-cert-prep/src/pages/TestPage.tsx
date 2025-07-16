@@ -118,16 +118,12 @@ const TestPage = () => {
             <CardTitle className="text-2xl">
               {category === 'cloud-practitioner' 
                 ? 'AWS Certified Cloud Practitioner' 
-                : category === 'solutions-architect'
-                ? 'AWS Certified Solutions Architect - Associate'
-                : 'AWS Certified Developer - Associate'}
+                : 'AWS Certified Solutions Architect - Associate'}
             </CardTitle>
             <CardDescription>
               {category === 'cloud-practitioner' 
                 ? 'Foundational level certification covering basic AWS cloud concepts'
-                : category === 'solutions-architect'
-                ? 'Associate level certification for designing distributed systems on AWS'
-                : 'Associate level certification for developing applications on AWS'}
+                : 'Associate level certification for designing distributed systems on AWS'}
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-6">
@@ -197,9 +193,7 @@ const TestPage = () => {
             <CardDescription>
               {category === 'cloud-practitioner' 
                 ? 'AWS Certified Cloud Practitioner' 
-                : category === 'solutions-architect'
-                ? 'AWS Certified Solutions Architect - Associate'
-                : 'AWS Certified Developer - Associate'}
+                : 'AWS Certified Solutions Architect - Associate'}
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-6">

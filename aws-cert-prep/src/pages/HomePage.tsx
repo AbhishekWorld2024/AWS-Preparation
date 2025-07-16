@@ -33,24 +33,16 @@ const HomePage = () => {
       level: 'Beginner Level',
       description: 'Foundational understanding of AWS Cloud concepts, services, and terminology',
       color: 'bg-green-500',
-      questions: '65 Questions',
-      duration: '90 Minutes'
+      questions: '200 Questions (5 Exams)',
+      duration: '40 Questions per Exam'
     },
     {
       title: 'AWS Certified Solutions Architect - Associate',
       level: 'Advanced Level',
       description: 'Design and deploy scalable, highly available systems on AWS',
       color: 'bg-blue-500',
-      questions: '65 Questions',
-      duration: '130 Minutes'
-    },
-    {
-      title: 'AWS Certified Developer - Associate',
-      level: 'Advanced Level',
-      description: 'Develop and maintain applications on the AWS platform',
-      color: 'bg-purple-500',
-      questions: '65 Questions',
-      duration: '130 Minutes'
+      questions: '200 Questions (5 Exams)',
+      duration: '40 Questions per Exam'
     }
   ]
 
@@ -61,7 +53,7 @@ const HomePage = () => {
           AWS Exam Prep - Master AWS Certifications
         </h1>
         <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-          Prepare for your AWS certification exams with 60 comprehensive practice tests, 
+          Prepare for your AWS certification exams with 400 comprehensive practice questions, 
           detailed explanations, and extensive documentation covering all major AWS services.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -98,7 +90,7 @@ const HomePage = () => {
                 <span>{cert.duration}</span>
               </div>
               <Button asChild className="w-full">
-                <Link to={`/test/${cert.title.includes('Cloud Practitioner') ? 'cloud-practitioner' : cert.title.includes('Solutions Architect') ? 'solutions-architect' : 'aws-developer'}`}>
+                <Link to={`/test/${cert.title.includes('Cloud Practitioner') ? 'cloud-practitioner' : 'solutions-architect'}`}>
                   Start Practice Test
                 </Link>
               </Button>

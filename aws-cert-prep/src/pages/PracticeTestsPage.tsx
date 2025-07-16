@@ -12,7 +12,7 @@ const PracticeTestsPage = () => {
       level: 'Beginner',
       description: 'Foundational level certification covering basic AWS cloud concepts, services, security, architecture, pricing, and support.',
       duration: '90 minutes',
-      questions: 65,
+      questions: 200,
       passingScore: '70%',
       color: 'bg-green-500',
       topics: [
@@ -28,7 +28,7 @@ const PracticeTestsPage = () => {
       level: 'Advanced',
       description: 'Associate level certification for designing distributed systems and applications on the AWS platform.',
       duration: '130 minutes',
-      questions: 65,
+      questions: 200,
       passingScore: '72%',
       color: 'bg-blue-500',
       topics: [
@@ -38,22 +38,6 @@ const PracticeTestsPage = () => {
         'Cost-Optimized Architectures'
       ]
     },
-    {
-      id: 'aws-developer',
-      title: 'AWS Certified Developer - Associate',
-      level: 'Advanced',
-      description: 'Associate level certification for developing and maintaining applications on the AWS platform.',
-      duration: '130 minutes',
-      questions: 65,
-      passingScore: '72%',
-      color: 'bg-purple-500',
-      topics: [
-        'Development with AWS Services',
-        'Security',
-        'Deployment',
-        'Troubleshooting and Optimization'
-      ]
-    }
   ]
 
   return (
@@ -63,7 +47,7 @@ const PracticeTestsPage = () => {
           AWS Practice Tests
         </h1>
         <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-          Choose your certification path and start practicing with our comprehensive question banks
+          Choose your certification path and start practicing with our comprehensive collection of 400 practice questions across 2 certification tracks
         </p>
       </div>
 
@@ -120,11 +104,11 @@ const PracticeTestsPage = () => {
               <div className="space-y-2">
                 <Button asChild className="w-full">
                   <Link to={`/test/${category.id}`}>
-                    Start Practice Test (20 Exams Available)
+                    Start Practice Test (5 Exams Available)
                   </Link>
                 </Button>
                 <p className="text-xs text-gray-500 dark:text-gray-400 text-center">
-                  20 practice exams with realistic simulation, timer and detailed explanations
+                  5 practice exams with realistic simulation, timer and detailed explanations
                 </p>
               </div>
             </CardContent>

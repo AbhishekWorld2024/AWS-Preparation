@@ -4,7 +4,7 @@ A comprehensive, full-featured AWS certification preparation platform built with
 
 ## 🚀 Live Demo
 
-[Live Website](https://your-deployed-url-here.com) *(Will be updated after deployment)*
+[Live Website](https://aws-prep-website-1jwhzula.devinapps.com)
 
 ## 📋 Features
 

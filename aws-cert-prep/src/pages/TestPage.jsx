@@ -11,19 +11,19 @@ import { useBookmarks } from '@/contexts/BookmarkContext'
 import { testQuestions } from '@/data/questions'
 
 const TestPage = () => {
-  const { category } = useParams<{ category: string }>()
+  const { category } = useParams()
   const navigate = useNavigate()
   const { addBookmark, removeBookmark, isBookmarked } = useBookmarks()
 
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
-  const [selectedAnswers, setSelectedAnswers] = useState<{ [key: number]: number }>({})
+  const [selectedAnswers, setSelectedAnswers] = useState({})
   const [timeRemaining, setTimeRemaining] = useState(0)
   const [isTestStarted, setIsTestStarted] = useState(false)
   const [isTestCompleted, setIsTestCompleted] = useState(false)
   const [showResults, setShowResults] = useState(false)
 
-  const [selectedExam, setSelectedExam] = useState<string>('exam-1')
-  const categoryQuestions = testQuestions[category as keyof typeof testQuestions]
+  const [selectedExam, setSelectedExam] = useState('exam-1')
+  const categoryQuestions = testQuestions[category]
   const questions = categoryQuestions?.[selectedExam] || []
   const testDuration = category === 'cloud-practitioner' ? 90 * 60 : 130 * 60 // in seconds
 
@@ -47,21 +47,21 @@ const TestPage = () => {
     setTimeRemaining(testDuration)
   }
 
-  const formatTime = (seconds: number) => {
+  const formatTime = (seconds) => {
     const hours = Math.floor(seconds / 3600)
     const minutes = Math.floor((seconds % 3600) / 60)
     const secs = seconds % 60
     return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`
   }
 
-  const handleAnswerSelect = (questionIndex: number, answerIndex: number) => {
+  const handleAnswerSelect = (questionIndex, answerIndex) => {
     setSelectedAnswers(prev => ({
       ...prev,
       [questionIndex]: answerIndex
     }))
   }
 
-  const handleBookmarkToggle = (question: any) => {
+  const handleBookmarkToggle = (question) => {
     if (isBookmarked(question.id)) {
       removeBookmark(question.id)
     } else {

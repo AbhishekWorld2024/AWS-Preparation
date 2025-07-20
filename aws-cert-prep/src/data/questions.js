@@ -1,14 +1,4 @@
-export interface Question {
-  id: string
-  question: string
-  options: string[]
-  correctAnswer: number
-  explanation: string
-  category: string
-  difficulty: 'beginner' | 'advanced'
-}
-
-export const testQuestions: Record<string, Record<string, Question[]>> = {
+export const testQuestions = {
   'cloud-practitioner': {
     'exam-1': [
       {
@@ -23,7 +13,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 2,
         explanation: 'The AWS shared responsibility model divides security responsibilities between AWS and the customer. AWS is responsible for "Security of the Cloud" (physical infrastructure, hardware, software, networking, and facilities), while customers are responsible for "Security in the Cloud" (customer data, platform, applications, identity and access management, operating system, network and firewall configuration).',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-1-2',
@@ -37,7 +27,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'Amazon S3 (Simple Storage Service) is AWS\'s object storage service. It provides industry-leading scalability, data availability, security, and performance. EBS provides block storage, EFS provides file storage, and FSx provides fully managed file systems.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-1-3',
@@ -51,7 +41,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 3,
         explanation: 'All of these are key benefits of cloud computing: 1) Trade capital expense for variable expense - pay only for what you use, 2) Benefit from massive economies of scale - AWS can achieve higher economies of scale, 3) Stop guessing about capacity - scale up or down as needed.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-1-4',
@@ -65,7 +55,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'Amazon CloudFront is AWS\'s content delivery network (CDN) service that securely delivers data, videos, applications, and APIs to customers globally with low latency and high transfer speeds.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-1-5',
@@ -79,7 +69,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'The AWS Free Tier provides customers the ability to explore and try out AWS services free of charge up to specified limits for each service. It includes three types of offers: Always Free, 12 Months Free, and Trials.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-1-6',
@@ -93,7 +83,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 2,
         explanation: 'On-Demand Instances allow you to pay for compute capacity by the hour or second with no long-term commitments. This pricing model is ideal for applications with unpredictable workloads that cannot be interrupted.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-1-7',
@@ -107,7 +97,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'AWS Availability Zones are physically separate data centers within an AWS Region. They provide high availability and fault tolerance by allowing you to distribute your applications across multiple isolated locations.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-1-8',
@@ -121,7 +111,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 0,
         explanation: 'Amazon VPC (Virtual Private Cloud) lets you provision a logically isolated section of the AWS Cloud where you can launch AWS resources in a virtual network that you define.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-1-9',
@@ -135,7 +125,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'The AWS Well-Architected Framework provides a consistent approach for customers and partners to evaluate architectures and implement designs that scale over time. It is based on five pillars: operational excellence, security, reliability, performance efficiency, and cost optimization.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-1-10',
@@ -149,7 +139,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 0,
         explanation: 'Amazon CloudWatch is a monitoring and observability service that provides data and actionable insights to monitor applications, respond to system-wide performance changes, optimize resource utilization, and get a unified view of operational health.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-1-11',
@@ -163,7 +153,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 0,
         explanation: 'Horizontal scaling (scaling out) involves adding more servers to handle increased load, while vertical scaling (scaling up) involves adding more power (CPU, RAM) to existing servers. AWS supports both approaches.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-1-12',
@@ -177,7 +167,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'Amazon Route 53 is a scalable Domain Name System (DNS) web service that provides domain registration, DNS routing, and health checking of resources.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-1-13',
@@ -191,7 +181,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'AWS Regions are geographic areas that contain multiple Availability Zones. They allow you to place resources and data in multiple geographic locations to meet compliance requirements and reduce latency.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-1-14',
@@ -205,7 +195,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 2,
         explanation: 'Amazon EBS (Elastic Block Store) provides persistent block storage volumes for use with Amazon EC2 instances. EBS volumes are highly available and reliable storage volumes that can be attached to any running instance.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-1-15',
@@ -219,7 +209,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'The AWS Management Console is a web-based interface for accessing and managing Amazon Web Services. It provides a graphical user interface to interact with AWS services.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-1-16',
@@ -233,7 +223,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'Amazon DynamoDB is a fully managed NoSQL database service that provides fast and predictable performance with seamless scalability.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-1-17',
@@ -247,7 +237,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'AWS Auto Scaling monitors your applications and automatically adjusts capacity to maintain steady, predictable performance at the lowest possible cost.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-1-18',
@@ -261,7 +251,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 2,
         explanation: 'Amazon EFS (Elastic File System) provides scalable file storage for use with Amazon EC2. EFS file systems can be mounted on multiple EC2 instances simultaneously.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-1-19',
@@ -275,7 +265,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'The AWS CLI (Command Line Interface) is a unified tool to manage your AWS services from the command line and automate them through scripts.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-1-20',
@@ -289,7 +279,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 2,
         explanation: 'Elastic Load Balancing automatically distributes incoming application traffic across multiple targets, such as Amazon EC2 instances, containers, and IP addresses.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-1-21',
@@ -303,7 +293,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'AWS CloudFormation provides a common language for you to model and provision AWS and third-party application resources in your cloud environment using infrastructure as code.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-1-22',
@@ -317,7 +307,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 2,
         explanation: 'Amazon Redshift is a fully managed data warehouse service in the cloud that allows you to analyze data using standard SQL and existing Business Intelligence tools.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-1-23',
@@ -331,7 +321,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 0,
         explanation: 'The AWS Support Center is where you can submit and track support cases, access AWS Trusted Advisor, and view your support plan details.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-1-24',
@@ -345,7 +335,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'Amazon SQS (Simple Queue Service) is a fully managed message queuing service that enables you to decouple and scale microservices, distributed systems, and serverless applications.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-1-25',
@@ -359,7 +349,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'Reserved Instances provide a significant discount (up to 75%) compared to On-Demand instance pricing in exchange for a commitment to use specific instance types in specific regions for a one or three-year term.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-1-26',
@@ -373,7 +363,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 2,
         explanation: 'Amazon SES (Simple Email Service) is a cloud-based email sending service designed to help digital marketers and application developers send marketing, notification, and transactional emails.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-1-27',
@@ -387,7 +377,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 0,
         explanation: 'AWS Trusted Advisor is an online tool that provides real-time guidance to help you provision your resources following AWS best practices in cost optimization, security, fault tolerance, and performance improvement.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-1-28',
@@ -401,7 +391,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'Amazon SNS (Simple Notification Service) is a fully managed messaging service for both application-to-application (A2A) and application-to-person (A2P) communication, including push notifications.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-1-29',
@@ -415,7 +405,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 0,
         explanation: 'The AWS Global Infrastructure consists of AWS Regions and Availability Zones around the world, providing a global network of data centers to deliver AWS services with low latency and high availability.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-1-30',
@@ -429,7 +419,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 0,
         explanation: 'Amazon API Gateway is a fully managed service that makes it easy for developers to create, publish, maintain, monitor, and secure APIs at any scale.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-1-31',
@@ -443,7 +433,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'AWS Edge Locations are sites that Amazon CloudFront uses to cache copies of your content closer to your users for faster delivery.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-1-32',
@@ -457,7 +447,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'Amazon ECS (Elastic Container Service) is a fully managed container orchestration service that supports Docker containers and allows you to easily run applications on a managed cluster of Amazon EC2 instances.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-1-33',
@@ -471,7 +461,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 2,
         explanation: 'The AWS Billing Dashboard provides a comprehensive view of your AWS costs and usage, allowing you to monitor spending, set up billing alerts, and analyze cost trends.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-1-34',
@@ -485,7 +475,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'Amazon Kinesis makes it easy to collect, process, and analyze real-time, streaming data so you can get timely insights and react quickly to new information.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-1-35',
@@ -499,7 +489,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 0,
         explanation: 'AWS Organizations is an account management service that enables you to centrally manage and govern your environment as you grow and scale your AWS resources.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-1-36',
@@ -513,7 +503,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 3,
         explanation: 'AWS offers several AI/ML services that require no machine learning expertise: Amazon Rekognition for image and video analysis, Amazon Comprehend for natural language processing, and Amazon SageMaker for building ML models.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-1-37',
@@ -527,7 +517,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'AWS Marketplace is a digital catalog with thousands of software listings from independent software vendors that make it easy to find, test, buy, and deploy software that runs on AWS.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-1-38',
@@ -541,7 +531,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 3,
         explanation: 'AWS provides multiple backup solutions: AWS Backup for centralized backup across AWS services, Amazon S3 for object storage and backup, and Amazon Glacier for long-term archival and backup.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-1-39',
@@ -555,7 +545,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'AWS Cost Explorer is a tool that enables you to view and analyze your costs and usage. You can explore your AWS costs using an interface that lets you create custom reports.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-1-40',
@@ -569,7 +559,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'AWS Storage Gateway is a hybrid cloud storage service that connects an on-premises software appliance with cloud-based storage to provide seamless and secure integration between your on-premises environment and AWS.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       }
     ],
     'exam-2': [
@@ -585,7 +575,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'Amazon RDS (Relational Database Service) is a managed service that makes it easy to set up, operate, and scale relational databases in the cloud. It supports multiple database engines including MySQL, PostgreSQL, Oracle, SQL Server, and MariaDB.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-2-2',
@@ -599,7 +589,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'Amazon EC2 (Elastic Compute Cloud) provides scalable virtual servers in the cloud. It allows you to launch virtual machines with various configurations of CPU, memory, storage, and networking capacity.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-2-3',
@@ -613,7 +603,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'Amazon Route 53 is a scalable Domain Name System (DNS) web service. It effectively connects user requests to infrastructure running in AWS and can also be used to route users to infrastructure outside of AWS.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-2-4',
@@ -627,7 +617,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'AWS IAM (Identity and Access Management) enables you to manage access to AWS services and resources securely. Using IAM, you can create and manage AWS users and groups, and use permissions to allow and deny their access to AWS resources.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-2-5',
@@ -641,7 +631,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'AWS Lambda is a serverless compute service that lets you run code without provisioning or managing servers. You pay only for the compute time you consume - there is no charge when your code is not running.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-2-6',
@@ -655,7 +645,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 0,
         explanation: 'Amazon S3 provides object storage for storing and retrieving any amount of data from anywhere, while Amazon EBS provides block-level storage volumes for use with EC2 instances.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-2-7',
@@ -669,7 +659,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'AWS Shield is a managed DDoS protection service that safeguards applications running on AWS. AWS Shield Standard is automatically included at no extra cost, while Shield Advanced provides additional protections.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-2-8',
@@ -683,7 +673,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'Amazon CloudWatch is a monitoring and observability service that provides data and actionable insights to monitor applications, respond to system-wide performance changes, and optimize resource utilization.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-2-9',
@@ -697,7 +687,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'Amazon EKS (Elastic Kubernetes Service) is a managed service that makes it easy for you to run Kubernetes on AWS without needing to install and operate your own Kubernetes control plane.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-2-10',
@@ -711,7 +701,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'AWS CloudTrail is a service that enables governance, compliance, operational auditing, and risk auditing of your AWS account by logging API calls and user activity.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-2-11',
@@ -725,7 +715,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 2,
         explanation: 'Amazon EFS (Elastic File System) provides scalable file storage for use with Amazon EC2 instances. It can be mounted on multiple instances simultaneously and scales automatically.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-2-12',
@@ -739,7 +729,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'The AWS CLI is a unified tool to manage your AWS services from the command line and automate them through scripts.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-2-13',
@@ -753,7 +743,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'AWS WAF (Web Application Firewall) helps protect your web applications or APIs against common web exploits that may affect availability, compromise security, or consume excessive resources.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-2-14',
@@ -767,7 +757,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'Amazon Glacier is a secure, durable, and extremely low-cost storage service for data archiving and long-term backup.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-2-15',
@@ -781,7 +771,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 0,
         explanation: 'AWS Config is a service that enables you to assess, audit, and evaluate the configurations of your AWS resources for compliance and governance.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-2-16',
@@ -795,7 +785,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'AWS Direct Connect is a cloud service solution that makes it easy to establish a dedicated network connection from your premises to AWS, which can reduce network costs and increase bandwidth throughput.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-2-17',
@@ -809,7 +799,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 2,
         explanation: 'Amazon GuardDuty is a threat detection service that continuously monitors for malicious activity and unauthorized behavior to protect your AWS accounts and workloads.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-2-18',
@@ -823,7 +813,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'AWS Elastic Beanstalk is an easy-to-use service for deploying and scaling web applications and services. You simply upload your code and Elastic Beanstalk automatically handles the deployment.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-2-19',
@@ -837,7 +827,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'Amazon SQS (Simple Queue Service) is a fully managed message queuing service that enables you to decouple and scale microservices, distributed systems, and serverless applications.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-2-20',
@@ -851,7 +841,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 2,
         explanation: 'In the AWS Shared Responsibility Model, AWS is responsible for security "of" the cloud (infrastructure, hardware, software, networking, and facilities), while customers are responsible for security "in" the cloud (customer data, platform, applications, IAM, OS, network and firewall configuration).',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-2-21',
@@ -865,7 +855,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 3,
         explanation: 'AWS provides multiple services for serverless applications: Lambda for serverless compute, SAM (Serverless Application Model) for building serverless applications, and the Serverless Application Repository for discovering and deploying serverless applications.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-2-22',
@@ -879,7 +869,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'Amazon WorkSpaces is a managed, secure Desktop-as-a-Service (DaaS) solution that allows you to provision either Windows or Linux desktops in just a few minutes.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-2-23',
@@ -893,7 +883,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'Amazon CloudFront is a fast content delivery network (CDN) service that securely delivers data, videos, applications, and APIs to customers globally with low latency and high transfer speeds.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-2-24',
@@ -907,7 +897,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'AWS Systems Manager gives you visibility and control of your infrastructure on AWS. It provides a unified user interface so you can view operational data from multiple AWS services.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-2-25',
@@ -921,7 +911,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'Amazon MSK (Managed Streaming for Apache Kafka) is a fully managed service that makes it easy for you to build and run applications that use Apache Kafka to process streaming data.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-2-26',
@@ -935,7 +925,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'AWS CodeCommit is a fully-managed source control service that hosts secure Git-based repositories. It makes it easy for teams to collaborate on code in a secure and highly scalable ecosystem.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-2-27',
@@ -949,7 +939,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'Amazon SageMaker is a fully managed service that provides every developer and data scientist with the ability to build, train, and deploy machine learning models quickly.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-2-28',
@@ -963,7 +953,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 0,
         explanation: 'AWS Certificate Manager is a service that lets you easily provision, manage, and deploy public and private Secure Sockets Layer/Transport Layer Security (SSL/TLS) certificates for use with AWS services.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-2-29',
@@ -977,7 +967,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 3,
         explanation: 'AWS provides multiple services for data transfer acceleration: CloudFront for content delivery, Global Accelerator for application acceleration, and S3 Transfer Acceleration for faster uploads to S3.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-2-30',
@@ -991,7 +981,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 0,
         explanation: 'Amazon Inspector is an automated security assessment service that helps improve the security and compliance of applications deployed on AWS by automatically assessing applications for exposure, vulnerabilities, and deviations from best practices.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-2-31',
@@ -1005,7 +995,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'Amazon Managed Blockchain is a fully managed service that makes it easy to create and manage scalable blockchain networks using the popular open source frameworks Hyperledger Fabric and Ethereum.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-2-32',
@@ -1019,7 +1009,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'AWS Personal Health Dashboard provides alerts and remediation guidance when AWS is experiencing events that may impact you. It gives you a personalized view into the performance and availability of the AWS services underlying your AWS resources.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-2-33',
@@ -1033,7 +1023,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 2,
         explanation: 'Amazon Timestream is a fast, scalable, and serverless time series database service for IoT and operational applications that makes it easy to store and analyze trillions of events per day.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-2-34',
@@ -1047,7 +1037,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 0,
         explanation: 'AWS Snow Family is a collection of physical devices that help migrate large amounts of data into and out of the cloud without depending on networks. It includes AWS Snowcone, AWS Snowball, and AWS Snowmobile.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-2-35',
@@ -1061,7 +1051,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 2,
         explanation: 'Amazon Neptune is a fast, reliable, fully-managed graph database service that makes it easy to build and run applications that work with highly connected datasets.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-2-36',
@@ -1075,7 +1065,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 0,
         explanation: 'AWS Outposts is a fully managed service that extends AWS infrastructure, services, APIs, and tools to virtually any datacenter, co-location space, or on-premises facility for a truly consistent hybrid experience.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-2-37',
@@ -1089,7 +1079,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 3,
         explanation: 'AWS provides multiple services that support Apache Spark: Amazon EMR for big data processing, AWS Glue for ETL jobs, and Amazon Kinesis Analytics for real-time analytics.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-2-38',
@@ -1103,7 +1093,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 0,
         explanation: 'Amazon Macie is a fully managed data security and data privacy service that uses machine learning and pattern matching to discover and protect your sensitive data in AWS.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-2-39',
@@ -1117,7 +1107,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 2,
         explanation: 'Amazon MQ is a managed message broker service for Apache ActiveMQ and RabbitMQ that makes it easy to set up and operate message brokers in the cloud.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-2-40',
@@ -1131,7 +1121,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'AWS Well-Architected Tool helps you review your architectures against current AWS best practices and provides guidance for improvement based on the AWS Well-Architected Framework.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       }
     ],
     'exam-3': [
@@ -1147,7 +1137,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 3,
         explanation: 'The AWS Free Tier includes three types of offers: Always Free (services that are always free up to certain limits), 12 Months Free (free for 12 months from account creation), and Trials (short-term free trials for specific services).',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-3-2',
@@ -1161,7 +1151,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'Amazon S3 can host static websites directly by enabling static website hosting on an S3 bucket. This is cost-effective for websites with only HTML, CSS, JavaScript, and images.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-3-3',
@@ -1175,7 +1165,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'AWS Regions are geographic areas that contain multiple Availability Zones. Each Availability Zone is a physically separate data center within a Region, providing fault tolerance and high availability.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-3-4',
@@ -1189,7 +1179,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 2,
         explanation: 'AWS STS (Security Token Service) provides temporary, limited-privilege credentials for AWS services. These credentials are more secure than long-term access keys.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-3-5',
@@ -1203,7 +1193,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 0,
         explanation: 'AWS CloudWatch Logs enables you to centralize the logs from all of your systems, applications, and AWS services that you use, in a single, highly scalable service.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-3-6',
@@ -1217,7 +1207,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'Amazon DynamoDB is a fully managed NoSQL database service that provides fast and predictable performance with seamless scalability.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-3-7',
@@ -1231,7 +1221,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'The AWS Acceptable Use Policy describes prohibited uses of the web services offered by AWS. It is designed to protect AWS customers and the AWS network.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-3-8',
@@ -1245,7 +1235,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 2,
         explanation: 'Elastic Load Balancing (ELB) automatically distributes incoming application traffic across multiple targets, such as Amazon EC2 instances, containers, and IP addresses.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-3-9',
@@ -1259,7 +1249,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 2,
         explanation: 'Using multiple Availability Zones provides high availability and fault tolerance. If one AZ fails, your application can continue running in other AZs.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-3-10',
@@ -1273,7 +1263,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 2,
         explanation: 'Amazon S3 provides object-level storage where data is stored as objects within buckets. Each object can be up to 5TB in size.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-3-11',
@@ -1287,7 +1277,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 2,
         explanation: 'AWS CloudFormation allows you to use programming languages or a simple text file to model and provision AWS and third-party application resources in an automated and secure manner.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-3-12',
@@ -1301,7 +1291,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'Amazon CloudFront is a content delivery network (CDN) service that securely delivers data, videos, applications, and APIs to customers globally with low latency.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-3-13',
@@ -1315,7 +1305,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'AWS IAM enables you to manage access to AWS services and resources securely. You can create and manage AWS users and groups, and use permissions to allow and deny access.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-3-14',
@@ -1329,7 +1319,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 2,
         explanation: 'AWS Lambda is a serverless compute service that lets you run code without provisioning or managing servers. You pay only for the compute time you consume.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-3-15',
@@ -1343,7 +1333,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 0,
         explanation: 'Amazon VPC (Virtual Private Cloud) lets you provision a logically isolated section of the AWS Cloud where you can launch AWS resources in a virtual network that you define.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-3-16',
@@ -1357,7 +1347,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'Amazon RDS (Relational Database Service) makes it easy to set up, operate, and scale a relational database in the cloud.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-3-17',
@@ -1371,7 +1361,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 0,
         explanation: 'The AWS Support Center is where you can submit and track support cases, access AWS Trusted Advisor, and view your support plan details.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-3-18',
@@ -1385,7 +1375,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'Amazon SQS (Simple Queue Service) is a fully managed message queuing service that enables you to decouple and scale microservices, distributed systems, and serverless applications.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-3-19',
@@ -1399,7 +1389,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'Reserved Instances provide a significant discount (up to 75%) compared to On-Demand instance pricing in exchange for a commitment to use specific instance types.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-3-20',
@@ -1413,7 +1403,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 2,
         explanation: 'Amazon SES (Simple Email Service) is a cloud-based email sending service designed to help digital marketers and application developers send marketing, notification, and transactional emails.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-3-21',
@@ -1427,7 +1417,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 0,
         explanation: 'AWS Trusted Advisor is an online tool that provides real-time guidance to help you provision your resources following AWS best practices.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-3-22',
@@ -1441,7 +1431,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'Amazon SNS (Simple Notification Service) is a fully managed messaging service for both application-to-application and application-to-person communication.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-3-23',
@@ -1455,7 +1445,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 0,
         explanation: 'The AWS Global Infrastructure consists of AWS Regions and Availability Zones around the world, providing a global network of data centers.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-3-24',
@@ -1469,7 +1459,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 0,
         explanation: 'Amazon API Gateway is a fully managed service that makes it easy for developers to create, publish, maintain, monitor, and secure APIs at any scale.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-3-25',
@@ -1483,7 +1473,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'AWS Edge Locations are sites that Amazon CloudFront uses to cache copies of your content closer to your users for faster delivery.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-3-26',
@@ -1497,7 +1487,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'Amazon ECS (Elastic Container Service) is a fully managed container orchestration service that supports Docker containers.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-3-27',
@@ -1511,7 +1501,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 2,
         explanation: 'The AWS Billing Dashboard provides a comprehensive view of your AWS costs and usage, allowing you to monitor spending and analyze cost trends.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-3-28',
@@ -1525,7 +1515,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'Amazon Kinesis makes it easy to collect, process, and analyze real-time, streaming data so you can get timely insights and react quickly to new information.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-3-29',
@@ -1539,7 +1529,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 0,
         explanation: 'AWS Organizations is an account management service that enables you to centrally manage and govern your environment as you grow and scale your AWS resources.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-3-30',
@@ -1553,7 +1543,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 3,
         explanation: 'AWS offers several AI/ML services that require no machine learning expertise: Amazon Rekognition for image analysis, Amazon Comprehend for natural language processing, and Amazon SageMaker for building ML models.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-3-31',
@@ -1567,7 +1557,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'AWS Marketplace is a digital catalog with thousands of software listings from independent software vendors that make it easy to find, test, buy, and deploy software that runs on AWS.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-3-32',
@@ -1581,7 +1571,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 3,
         explanation: 'AWS provides multiple backup solutions: AWS Backup for centralized backup, Amazon S3 for object storage and backup, and Amazon Glacier for long-term archival.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-3-33',
@@ -1595,7 +1585,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'AWS Cost Explorer is a tool that enables you to view and analyze your costs and usage. You can explore your AWS costs using an interface that lets you create custom reports.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-3-34',
@@ -1609,7 +1599,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'AWS Storage Gateway is a hybrid cloud storage service that connects an on-premises software appliance with cloud-based storage.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-3-35',
@@ -1623,7 +1613,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'Amazon WorkSpaces is a managed, secure Desktop-as-a-Service (DaaS) solution that allows you to provision either Windows or Linux desktops.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-3-36',
@@ -1637,7 +1627,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'AWS WAF (Web Application Firewall) helps protect your web applications or APIs against common web exploits.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-3-37',
@@ -1651,7 +1641,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'Amazon Glacier is a secure, durable, and extremely low-cost storage service for data archiving and long-term backup.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-3-38',
@@ -1665,7 +1655,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 0,
         explanation: 'AWS Config is a service that enables you to assess, audit, and evaluate the configurations of your AWS resources.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-3-39',
@@ -1679,7 +1669,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'AWS Direct Connect is a cloud service solution that makes it easy to establish a dedicated network connection from your premises to AWS.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-3-40',
@@ -1693,7 +1683,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 2,
         explanation: 'Amazon GuardDuty is a threat detection service that continuously monitors for malicious activity and unauthorized behavior.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       }
     ],
     'exam-4': [
@@ -1709,7 +1699,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'AWS CloudFormation allows you to model and provision AWS and third-party application resources using infrastructure as code. You can use templates to define your infrastructure in a declarative way.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-4-2',
@@ -1723,7 +1713,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'Amazon ECS (Elastic Container Service) is a fully managed container orchestration service that makes it easy to deploy, manage, and scale containerized applications using Docker.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-4-3',
@@ -1737,7 +1727,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 3,
         explanation: 'AWS Auto Scaling provides all these benefits: reduces manual intervention by automatically adjusting capacity, maintains application availability by ensuring healthy instances, and optimizes costs by scaling resources based on demand.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       }
     ],
     'exam-5': [
@@ -1753,7 +1743,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'Amazon CloudWatch is a monitoring and observability service that provides data and actionable insights to monitor applications, respond to system-wide performance changes, and optimize resource utilization.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-5-2',
@@ -1767,7 +1757,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 0,
         explanation: 'Amazon Route 53 is a highly available and scalable cloud Domain Name System (DNS) web service designed to route end users to Internet applications.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-5-3',
@@ -1781,7 +1771,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'The AWS Well-Architected Framework provides a set of best practices for designing and operating reliable, secure, efficient, and cost-effective systems in the cloud. It consists of five pillars: operational excellence, security, reliability, performance efficiency, and cost optimization.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-5-4',
@@ -1795,7 +1785,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'Amazon DynamoDB is a fully managed NoSQL database service that provides fast and predictable performance with seamless scalability.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-5-5',
@@ -1809,7 +1799,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'AWS IAM enables you to manage access to AWS services and resources securely. Using IAM, you can create and manage AWS users and groups, and use permissions to allow and deny their access to AWS resources.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-5-6',
@@ -1823,7 +1813,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'Amazon CloudFront is a fast content delivery network (CDN) service that securely delivers data, videos, applications, and APIs to customers globally with low latency and high transfer speeds.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-5-7',
@@ -1837,7 +1827,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'AWS Elastic Load Balancing automatically distributes incoming application traffic across multiple targets, such as Amazon EC2 instances, containers, IP addresses, and Lambda functions, improving application availability and fault tolerance.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-5-8',
@@ -1851,7 +1841,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 2,
         explanation: 'AWS Lambda is a serverless compute service that lets you run code without provisioning or managing servers. You pay only for the compute time you consume.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-5-9',
@@ -1865,7 +1855,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 0,
         explanation: 'Amazon Virtual Private Cloud (VPC) lets you provision a logically isolated section of the AWS Cloud where you can launch AWS resources in a virtual network that you define.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-5-10',
@@ -1879,7 +1869,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'Amazon Simple Queue Service (SQS) is a fully managed message queuing service that enables you to decouple and scale microservices, distributed systems, and serverless applications.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-5-11',
@@ -1893,7 +1883,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'The AWS Free Tier provides customers the ability to explore and try out AWS services free of charge up to specified limits for each service.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-5-12',
@@ -1907,7 +1897,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 2,
         explanation: 'Amazon Redshift is a fully managed, petabyte-scale data warehouse service in the cloud that makes it simple and cost-effective to analyze data.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-5-13',
@@ -1921,7 +1911,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'AWS CloudTrail is a service that enables governance, compliance, operational auditing, and risk auditing of your AWS account by logging API calls and user activity.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-5-14',
@@ -1935,7 +1925,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 2,
         explanation: 'Amazon Simple Email Service (SES) is a cloud-based email sending service designed to help digital marketers and application developers send marketing, notification, and transactional emails.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-5-15',
@@ -1949,7 +1939,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 0,
         explanation: 'AWS Config is a service that enables you to assess, audit, and evaluate the configurations of your AWS resources for compliance and security.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-5-16',
@@ -1963,7 +1953,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'Amazon Elastic Kubernetes Service (EKS) is a managed service that makes it easy for you to run Kubernetes on AWS without needing to install and operate your own Kubernetes control plane.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-5-17',
@@ -1977,7 +1967,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 3,
         explanation: 'AWS Auto Scaling provides all these benefits: reduces costs by automatically adjusting capacity based on demand, improves application availability by ensuring healthy instances, and maintains performance during demand changes.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-5-18',
@@ -1991,7 +1981,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 0,
         explanation: 'Amazon EMR (Elastic MapReduce) is a cloud big data platform for processing vast amounts of data using open source tools such as Apache Spark, Apache Hive, Apache HBase, Apache Flink, and Apache Hudi.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-5-19',
@@ -2005,7 +1995,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 0,
         explanation: 'AWS Systems Manager gives you visibility and control of your infrastructure on AWS. It provides a unified user interface to view operational data from multiple AWS services and automate operational tasks.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-5-20',
@@ -2019,7 +2009,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 0,
         explanation: 'Amazon SageMaker is a fully managed service that provides every developer and data scientist with the ability to build, train, and deploy machine learning models quickly.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-5-21',
@@ -2033,7 +2023,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 0,
         explanation: 'AWS Organizations is an account management service that enables you to centrally manage and govern your environment as you grow and scale your AWS resources.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-5-22',
@@ -2047,7 +2037,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'Amazon Managed Streaming for Apache Kafka (MSK) is a fully managed service that makes it easy for you to build and run applications that use Apache Kafka to process streaming data.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-5-23',
@@ -2061,7 +2051,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 0,
         explanation: 'AWS CodeCommit is a fully-managed source control service that hosts secure Git-based repositories, making it easy for teams to collaborate on code.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-5-24',
@@ -2075,7 +2065,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 2,
         explanation: 'Amazon ElastiCache is a web service that makes it easy to deploy, operate, and scale an in-memory cache in the cloud, supporting both Redis and Memcached engines.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-5-25',
@@ -2089,7 +2079,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 3,
         explanation: 'AWS CloudFormation provides all these benefits: Infrastructure as Code capabilities, automated resource provisioning through templates, and version control for infrastructure changes.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-5-26',
@@ -2103,7 +2093,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 2,
         explanation: 'Amazon DocumentDB is a fast, scalable, highly available, and fully managed document database service that supports MongoDB workloads.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-5-27',
@@ -2117,7 +2107,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 0,
         explanation: 'AWS Secrets Manager helps you protect secrets needed to access your applications, services, and IT resources. The service enables you to easily rotate, manage, and retrieve database credentials, API keys, and other secrets.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-5-28',
@@ -2131,7 +2121,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 3,
         explanation: 'Amazon Neptune is a fast, reliable, fully-managed graph database service that makes it easy to build and run applications that work with highly connected datasets.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-5-29',
@@ -2145,7 +2135,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 0,
         explanation: 'AWS Step Functions is a serverless function orchestrator that makes it easy to sequence AWS Lambda functions and multiple AWS services into business-critical applications.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-5-30',
@@ -2159,7 +2149,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 2,
         explanation: 'Amazon Timestream is a fast, scalable, and serverless time series database service for IoT and operational applications that makes it easy to store and analyze trillions of events per day.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-5-31',
@@ -2173,7 +2163,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 0,
         explanation: 'AWS AppSync is a managed service that uses GraphQL to make it easy for applications to get exactly the data they need from multiple data sources.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-5-32',
@@ -2187,7 +2177,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'Amazon Managed Workflows for Apache Airflow (MWAA) is a managed orchestration service for Apache Airflow that makes it easier to set up and operate end-to-end data pipelines.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-5-33',
@@ -2201,7 +2191,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 0,
         explanation: 'AWS DataSync is an online data transfer service that simplifies, automates, and accelerates moving data between on-premises storage systems and AWS storage services.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-5-34',
@@ -2215,7 +2205,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 2,
         explanation: 'Amazon Keyspaces (for Apache Cassandra) is a scalable, highly available, and managed Apache Cassandra-compatible database service.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-5-35',
@@ -2229,7 +2219,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 0,
         explanation: 'AWS X-Ray is a service that collects data about requests that your application serves, and provides tools you can use to view, filter, and gain insights into that data to identify issues and opportunities for optimization.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-5-36',
@@ -2243,7 +2233,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'Amazon Managed Blockchain is a fully managed service that makes it easy to create and manage scalable blockchain networks using popular open source frameworks.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-5-37',
@@ -2257,7 +2247,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 0,
         explanation: 'AWS Amplify is a set of tools and services that enables mobile and front-end web developers to build secure, scalable full stack applications.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-5-38',
@@ -2271,7 +2261,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'Amazon Quantum Ledger Database (QLDB) is a fully managed ledger database that provides a transparent, immutable, and cryptographically verifiable transaction log.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-5-39',
@@ -2285,7 +2275,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 0,
         explanation: 'AWS IoT Core is a managed cloud service that lets connected devices easily and securely interact with cloud applications and other devices.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       },
       {
         id: 'cp-5-40',
@@ -2299,7 +2289,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 0,
         explanation: 'Amazon Kinesis Data Analytics is the easiest way to analyze streaming data, gain actionable insights, and respond to your business and customer needs in real time using Apache Flink.',
         category: 'cloud-practitioner',
-        difficulty: 'beginner' as const
+        difficulty: 'beginner'
       }
     ]
   },
@@ -2317,7 +2307,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For a critical trading application requiring sub-millisecond latency and zero downtime, a Multi-AZ deployment provides high availability across multiple data centers. Auto Scaling Groups ensure automatic scaling during peak trading periods. Application Load Balancer distributes traffic efficiently across healthy instances. ElastiCache for Redis provides sub-millisecond latency for frequently accessed trading data. RDS Multi-AZ provides database high availability with automatic failover and encryption at rest and in transit. This architecture supports comprehensive audit trails through CloudTrail, VPC Flow Logs, and application-level logging for regulatory compliance. The other options either lack the required performance, availability, or compliance features needed for a critical financial trading system.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-1-2',
@@ -2331,7 +2321,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For a global e-commerce platform with extreme traffic spikes and strict compliance requirements, a multi-region active-active deployment is essential. Route 53 health checks provide intelligent DNS routing to healthy regions. CloudFront CDN ensures sub-second response times globally by caching content at edge locations. Auto Scaling Groups handle automatic scaling during traffic surges. DynamoDB Global Tables provide multi-region, multi-master database replication for consistent user experience. Regional compliance controls ensure GDPR compliance in Europe and PCI DSS compliance for payment processing. This architecture provides 99.99% availability through redundancy across multiple regions and can handle 2000% traffic spikes automatically without manual intervention.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-1-3',
@@ -2345,7 +2335,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'Auto Scaling Groups automatically adjust the number of EC2 instances based on demand, while Application Load Balancer distributes traffic across healthy instances. This combination provides automatic scaling and high availability while optimizing costs.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-1-4',
@@ -2359,7 +2349,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 2,
         explanation: 'Warm Standby maintains a scaled-down version of a fully functional environment always running in the cloud. This strategy can meet the RTO of 1 hour and RPO of 15 minutes requirements. Pilot Light would have longer RTO, while Multi-Site would be more expensive than necessary.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-1-5',
@@ -2373,7 +2363,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'Amazon Kinesis can ingest and process streaming data in real-time, Lambda can process the data as it arrives, and S3 can store the results for analytics. This combination provides a serverless, scalable solution for real-time data processing.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-1-6',
@@ -2387,7 +2377,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For HIPAA compliance, a Multi-AZ deployment ensures high availability and disaster recovery. Encrypted EBS volumes and RDS provide data encryption at rest. VPC with private subnets isolates sensitive data. CloudTrail provides comprehensive audit logging of all API calls. AWS Config monitors configuration compliance. Cross-region backup ensures geographic redundancy. IAM roles and policies provide fine-grained access control. This architecture meets all HIPAA requirements for data protection, audit trails, access control, and disaster recovery.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-1-7',
@@ -2401,7 +2391,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For global media streaming with extreme scaling requirements, CloudFront provides global content delivery with edge locations worldwide, ensuring sub-100ms latency. Multiple origin regions provide redundancy and regional optimization. Auto Scaling Groups with predictive scaling can anticipate traffic spikes during live events. ElastiCache provides fast content caching. S3 offers scalable, durable content storage. This architecture automatically handles traffic surges from 10K to 2M users while optimizing costs during low-traffic periods through elastic scaling.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-1-8',
@@ -2415,7 +2405,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For ultra-low latency trading systems, high-performance computing instances (C5n, R5n) with enhanced networking provide sub-millisecond processing. Local NVMe storage offers the fastest I/O for real-time decisions. ElastiCache for Redis in cluster mode provides sub-millisecond data access for risk calculations. Kinesis Data Streams handles high-throughput market data ingestion with ordering guarantees. S3 with lifecycle policies to Glacier provides cost-effective 7-year data retention. This architecture ensures 5ms decision times while maintaining complete audit trails and regulatory compliance.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-1-9',
@@ -2429,7 +2419,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For massive IoT data ingestion, AWS IoT Core provides secure, scalable device connectivity with built-in device management. Kinesis Data Streams handles high-throughput data ingestion (50GB/hour scaling to 500GB/hour). Lambda provides serverless real-time processing for anomaly detection. S3 with Intelligent-Tiering automatically optimizes storage costs for historical data. SageMaker enables machine learning analysis on historical data. This architecture scales from 100K to 1M devices while maintaining real-time processing and cost optimization.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-1-10',
@@ -2443,7 +2433,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For unpredictable viral content scaling, microservices architecture provides independent scaling of different components. Auto Scaling Groups handle 10,000% traffic spikes automatically. CloudFront provides global content delivery for consistent user experience. ElastiCache enables fast content feeds and recommendations. DynamoDB with on-demand billing scales automatically and optimizes costs. Lambda handles real-time content moderation. Feature flags enable safe A/B testing. This architecture automatically handles viral events while optimizing costs during normal operations.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-1-11',
@@ -2457,7 +2447,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For core banking systems, Aurora Global Database provides ACID compliance with cross-region replication for disaster recovery. Regional deployments ensure data sovereignty compliance. Real-time fraud detection using SageMaker processes transactions as they occur. Multi-AZ deployments in each region provide 99.99% availability. Regional compliance controls ensure adherence to local banking regulations in all 50 countries.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-1-12',
@@ -2471,7 +2461,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For multiplayer gaming with 1M concurrent players, GameLift provides managed game servers with automatic scaling and regional deployment for sub-50ms latency. ElastiCache enables real-time leaderboards and fast data access. DynamoDB Global Tables synchronize player data globally while maintaining low latency. CloudFront delivers static game assets with minimal latency. This architecture handles regional clustering and scales automatically during peak hours.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-1-13',
@@ -2485,7 +2475,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For global e-learning with 10M students, CloudFront provides worldwide content delivery with adaptive bitrate streaming. MediaConvert processes video content into multiple formats. Kinesis Video Streams handles live virtual classrooms with up to 10K concurrent viewers. Auto Scaling Groups manage traffic spikes during exam periods. DynamoDB tracks student progress in real-time. API Gateway enables secure integration with third-party educational tools.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-1-14',
@@ -2499,7 +2489,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For real-time logistics tracking of 500K vehicles, IoT Core provides secure, scalable vehicle connectivity. Kinesis Data Streams processes GPS updates every 30 seconds in real-time. Lambda functions handle dynamic route optimization and delivery predictions. DynamoDB stores tracking data with fast read/write capabilities. SageMaker provides predictive analytics for delivery time estimation. Auto Scaling handles 3x traffic during holidays.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-1-15',
@@ -2513,7 +2503,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For global telemedicine with healthcare compliance, multi-region deployment ensures data sovereignty for GDPR compliance. Encrypted data storage with KMS provides HIPAA-compliant data protection. Chime SDK handles 100K concurrent video calls with end-to-end encryption. Strict IAM policies control medical record access. CloudTrail provides comprehensive audit trails. Regional compliance controls ensure adherence to local healthcare regulations.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-1-16',
@@ -2527,7 +2517,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For cryptocurrency exchange security and performance, WAF and Shield Advanced protect against DDoS and web attacks. Encrypted storage with KMS protects sensitive trading data. Real-time fraud detection using machine learning prevents market manipulation. Cold storage integration with multi-signature security protects digital assets. Multi-region deployment ensures 99.99% uptime. High-performance instances with enhanced networking provide millisecond trade execution.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-1-17',
@@ -2541,7 +2531,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For smart city IoT with 1M sensors, IoT Core provides secure, scalable sensor connectivity. Kinesis Analytics processes real-time data streams for traffic optimization and emergency detection. Lambda functions handle immediate responses like traffic light adjustments. Data lakes store anonymized data for urban planning while maintaining privacy compliance. Machine learning models optimize city services based on patterns.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-1-18',
@@ -2555,7 +2545,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For global supply chain management across 100 countries, multi-region deployment ensures compliance with local trade regulations. Blockchain integration provides product authenticity and traceability. Machine learning models predict supply chain disruptions and optimize routes. Real-time analytics process millions of daily transactions for inventory visibility. API Gateway manages integrations with thousands of partners.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-1-19',
@@ -2569,7 +2559,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For scientific research with petabyte-scale data, AWS Batch provides elastic high-performance computing for complex simulations. S3 with Glacier Deep Archive offers cost-effective long-term preservation for decades. Data lakes with Lake Formation provide fine-grained access controls for secure data sharing between institutions. Global collaboration is enabled through secure APIs and federated access.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-1-20',
@@ -2583,7 +2573,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For disaster response systems, multi-region architecture ensures operations continue even with regional infrastructure damage. Satellite connectivity through AWS Ground Station provides communication when terrestrial networks fail. Edge computing with AWS Wavelength enables local processing during connectivity issues. Offline-capable mobile apps using local storage ensure field operations continue.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-1-21',
@@ -2597,7 +2587,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For a creator platform with millions of uploads, MediaConvert automatically processes content into multiple formats for different devices. Rekognition and Transcribe detect inappropriate content and provide automated moderation. CloudFront provides global content distribution with low latency. Real-time analytics using Kinesis track content performance and consumption for revenue sharing. Auto Scaling handles viral content traffic spikes automatically.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-1-22',
@@ -2611,7 +2601,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For autonomous vehicle fleet management, IoT Core provides secure, scalable vehicle connectivity with device management. Edge computing with AWS Wavelength ensures sub-100ms safety-critical response times. Secure OTA updates through IoT Device Management enable safe software deployment. Real-time sensor data processing uses Kinesis and Lambda for immediate decision-making. Redundant systems ensure safety during failures.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-1-23',
@@ -2625,7 +2615,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For precision agriculture across millions of acres, IoT Core manages sensor networks from drones and ground devices. Satellite data integration through AWS Ground Station provides comprehensive field monitoring. Machine learning models using SageMaker analyze crop health and predict yields. Real-time processing with Kinesis enables immediate irrigation and equipment responses. Seasonal auto-scaling handles varying data volumes.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-1-24',
@@ -2639,7 +2629,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For global news distribution with instant reach, multi-region deployment ensures worldwide content availability. CloudFront provides instant content delivery to millions of readers with edge caching. Auto Scaling handles traffic spikes during breaking news events. Real-time content distribution uses Kinesis for immediate publication. Personalized advertising through machine learning and real-time bidding maximizes revenue.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-1-25',
@@ -2653,7 +2643,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For VR training with ultra-low latency requirements, edge computing with AWS Wavelength provides sub-20ms latency to prevent motion sickness. CloudFront optimizes VR content delivery with specialized caching for large VR assets. Real-time multiplayer coordination uses GameLift for synchronized training sessions. Comprehensive analytics track detailed performance metrics for certification.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-1-26',
@@ -2667,7 +2657,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For quantum computing research, Amazon Braket provides access to quantum computers and simulators with sophisticated queuing. AWS Batch handles classical computing for hybrid quantum-classical algorithms. Priority-based scheduling manages expensive quantum hardware efficiently between educational and commercial users. Secure collaboration tools with fine-grained access controls protect intellectual property while enabling research sharing.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-1-27',
@@ -2681,7 +2671,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For space mission control, AWS Ground Station provides global satellite communication with multiple ground stations for redundancy. Real-time telemetry processing using Kinesis and Lambda enables immediate anomaly detection. Mission-critical redundancy across multiple regions ensures continuous operations. Secure international collaboration through federated access and encrypted communications maintains operational security.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-1-28',
@@ -2695,7 +2685,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For industrial digital twins, IoT Core provides secure connectivity to thousands of industrial assets. Real-time stream processing with Kinesis enables immediate monitoring and safety alerts. Digital twin modeling uses simulation services for predictive maintenance. Machine learning models predict equipment failures before they occur. Safety-critical alerting systems ensure sub-second response times for accident prevention.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-1-29',
@@ -2709,7 +2699,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For global climate monitoring, a resilient IoT network using IoT Core collects data from worldwide sensors with redundancy for extreme weather events. High-performance computing with AWS Batch processes massive datasets for climate modeling. International data sharing through secure APIs and federated access supports global research collaboration. Long-term preservation using S3 with Glacier Deep Archive ensures decades of data availability.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-1-30',
@@ -2723,7 +2713,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For precision medicine with genomic analysis, AWS Batch provides high-performance computing for processing 3 billion base pairs per patient. Secure patient data management with encryption and strict access controls ensures HIPAA compliance. Real-time machine learning recommendations using SageMaker provide immediate treatment suggestions for urgent cases. Clinical trial integration with secure data sharing enables research collaboration while protecting patient privacy.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-1-31',
@@ -2737,7 +2727,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For smart manufacturing optimization, IoT integration connects legacy industrial equipment through secure gateways. Real-time production optimization uses machine learning to adjust processes automatically. AI-powered quality control with computer vision detects defects immediately. Predictive maintenance models prevent costly equipment downtime. Global supply chain coordination through real-time data sharing optimizes inventory and demand forecasting.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-1-32',
@@ -2751,7 +2741,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For renewable energy grid management, real-time monitoring using IoT Core tracks generation from solar and wind sources. Weather-based forecasting with machine learning predicts renewable energy availability. Automated load balancing responds immediately to grid fluctuations for stability. Energy storage optimization maximizes renewable utilization while maintaining reliability. Real-time energy trading between regions optimizes grid efficiency.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-1-33',
@@ -2765,7 +2755,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For global logistics optimization, real-time route optimization using machine learning considers traffic, weather, and priorities. Global warehouse coordination through real-time inventory management optimizes stock placement. Customs integration streamlines international shipping with automated documentation. Auto Scaling handles 10x volume during peak seasons. Carbon footprint tracking and optimization supports sustainability goals.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-1-34',
@@ -2779,7 +2769,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For digital identity verification at scale, AI-powered document analysis using Rekognition detects fraudulent documents and verifies authenticity. Real-time fraud detection with machine learning identifies suspicious patterns immediately. Global compliance controls ensure adherence to KYC regulations in different jurisdictions. Secure biometric processing with encryption protects personal data. Comprehensive audit trails support regulatory compliance.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-1-35',
@@ -2793,7 +2783,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For virtual events with 100K concurrent attendees, global live streaming using CloudFront and MediaLive delivers high-quality video worldwide. Real-time interaction tools enable chat, Q&A, and networking features. Auto Scaling handles registration spikes and varying event sizes automatically. Comprehensive analytics track engagement and provide organizer insights. Integration APIs connect with existing event management and CRM systems.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-1-36',
@@ -2807,7 +2797,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For real-time fraud detection at 50K transactions per second, Kinesis Data Streams provides high-throughput transaction processing. ML-powered fraud detection using SageMaker makes sub-100ms decisions to approve or decline transactions. Adaptive learning continuously updates models based on new fraud patterns. Auto Scaling handles 3x volume during peak shopping periods. Real-time decision making minimizes false positives while catching fraud.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-1-37',
@@ -2821,7 +2811,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For drug discovery acceleration, high-performance computing with AWS Batch provides the computational power for complex molecular simulations. Molecular simulation capabilities process massive chemical databases efficiently. Secure research collaboration with fine-grained access controls protects proprietary data while enabling institutional partnerships. Laboratory integration connects with research equipment and databases for comprehensive workflows.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-1-38',
@@ -2835,7 +2825,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For real-time global translation, multi-region deployment ensures low latency worldwide. AWS Translate provides accurate translation across 100+ languages. Transcribe converts speech to text for voice translation. Polly converts translated text back to speech. Edge computing with CloudFront reduces latency for real-time communication. Auto Scaling handles millions of concurrent users during peak usage.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-1-39',
@@ -2849,7 +2839,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For carbon footprint tracking across global supply chains, multi-source data integration using AWS Glue handles varying data formats from thousands of suppliers. Real-time emissions calculation with Lambda processes data as it arrives. Automated reporting generates sustainability reports for regulatory compliance. Comprehensive audit trails using CloudTrail ensure data accuracy for compliance auditing. API Gateway enables integration with existing ERP systems.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-1-40',
@@ -2863,7 +2853,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For digital asset management with petabytes of creative files, S3 with Intelligent-Tiering optimizes storage costs automatically. Rekognition extracts metadata from images and videos for fast search. CloudFront provides global asset delivery with minimal latency. Collaborative editing features with version control enable team workflows. Lambda functions handle automatic metadata extraction and file processing. API Gateway enables integration with creative software tools.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       }
     ],
     'exam-2': [
@@ -2879,7 +2869,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'AWS Database Migration Service (DMS) helps you migrate databases to AWS quickly and securely. The source database remains fully operational during the migration, minimizing downtime to applications that rely on the database.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-2-2',
@@ -2893,7 +2883,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 0,
         explanation: 'Amazon SQS (Simple Queue Service) with Dead Letter Queues provides reliable message processing with built-in retry mechanisms. Failed messages are automatically moved to a dead letter queue for analysis and reprocessing.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-2-3',
@@ -2907,7 +2897,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 0,
         explanation: 'Amazon S3 Cross-Region Replication with Glacier storage class provides automated replication to another region with cost-effective long-term storage. This is ideal for disaster recovery scenarios where data needs to be preserved but may not be accessed frequently.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-2-4',
@@ -2921,7 +2911,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'Amazon ElastiCache for Redis provides in-memory caching with support for complex data structures like lists, sets, and sorted sets. It offers sub-millisecond latency and is ideal for applications requiring fast access to structured data.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-2-5',
@@ -2935,7 +2925,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 3,
         explanation: 'AWS Cloud Map provides service discovery for cloud resources, allowing services to register and discover each other. Combined with Amazon ECS, it provides a robust solution for microservices architecture with automatic service registration and health checking.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-2-6',
@@ -2949,7 +2939,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For global e-commerce with 50x traffic spikes, multi-region active-active deployment ensures global availability and performance. CloudFront provides sub-second response times worldwide with edge caching. DynamoDB Global Tables enable real-time inventory synchronization across regions. ElastiCache clusters provide fast product recommendations and session management. Predictive auto-scaling anticipates Black Friday traffic patterns and scales proactively.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-2-7',
@@ -2963,7 +2953,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For global clinical trials with regulatory compliance, multi-region deployment ensures data sovereignty for different countries. Encrypted data lakes with Lake Formation provide secure patient data storage with fine-grained access controls. Real-time safety monitoring using machine learning detects adverse events immediately. Automated regulatory reporting generates FDA and EMA submissions. Comprehensive audit systems using CloudTrail ensure complete data lineage for drug approval.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-2-8',
@@ -2977,7 +2967,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For space operations with satellite constellations, AWS Ground Station provides global satellite communication with multiple ground stations for redundancy. Real-time telemetry processing using Kinesis handles terabytes of space data daily. Orbital prediction models using machine learning optimize satellite positioning and collision avoidance. International collaboration platforms with secure data sharing enable multi-agency missions. Mission-critical redundancy across regions ensures continuous operations.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-2-9',
@@ -2991,7 +2981,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For international renewable energy management, IoT-enabled monitoring using IoT Core tracks energy production from wind and solar installations. Weather prediction models using machine learning optimize energy generation forecasts. Real-time grid optimization balances loads across 30 countries automatically. International energy trading platforms enable cross-border energy commerce. Sustainability analytics track carbon footprint reduction and environmental impact for regulatory reporting.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-2-10',
@@ -3005,7 +2995,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For global maritime logistics with 10K vessels, IoT tracking using IoT Core provides real-time vessel monitoring with satellite connectivity. Real-time route optimization considers weather, traffic, and fuel efficiency. Predictive analytics using machine learning provide accurate arrival time estimates. Customs integration with API Gateway streamlines documentation across 500 ports. Comprehensive cargo monitoring ensures security and condition tracking throughout the journey.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-2-11',
@@ -3019,7 +3009,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For high-frequency trading requiring sub-millisecond latency, high-performance computing instances with enhanced networking (SR-IOV) provide optimal performance. Ultra-low latency storage using local NVMe drives ensures fast data access. Real-time risk engines using machine learning monitor positions continuously. Comprehensive compliance monitoring with CloudTrail and Config ensures regulatory adherence. Multi-AZ deployment with synchronous replication prevents data loss.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-2-12',
@@ -3033,7 +3023,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For smart city traffic management serving 5M residents, IoT-enabled systems using IoT Core connect traffic lights, sensors, and vehicles. Real-time optimization algorithms adjust traffic patterns based on current conditions. Emergency vehicle prioritization provides automatic green corridors. Public transit integration optimizes bus and train schedules. Citizen services through mobile apps provide real-time traffic updates and route suggestions.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-2-13',
@@ -3047,7 +3037,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For global sports streaming to 100M viewers, CloudFront with MediaLive provides worldwide live streaming with ultra-low latency. Real-time transcoding supports multiple languages and quality levels. Regional advertising insertion maximizes revenue through targeted ads. Anti-piracy protection using DRM and watermarking prevents unauthorized distribution. Interactive features using real-time messaging enable live chat and statistics.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-2-14',
@@ -3061,7 +3051,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For precision semiconductor manufacturing, IoT-enabled monitoring using IoT Core tracks thousands of sensors with microsecond precision. Predictive maintenance using machine learning prevents equipment failures that could damage expensive wafers. Real-time quality control with computer vision detects defects at nanometer scale. Cleanroom management maintains optimal environmental conditions. Supply chain integration provides complete product traceability.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-2-15',
@@ -3075,7 +3065,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For global climate research with petabyte-scale data, worldwide data collection using IoT Core and Ground Station gathers environmental data from all sources. High-performance computing with AWS Batch runs complex climate models requiring massive computational power. International collaboration through secure APIs enables global research sharing. Long-term preservation using S3 with Glacier Deep Archive ensures decades of data availability for future research.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-2-16',
@@ -3089,7 +3079,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For connected vehicles with 10M cars, IoT-enabled connectivity using IoT Core provides secure vehicle communication with device management. Real-time telemetry processing handles massive sensor data streams for safety monitoring. OTA update management ensures secure software deployment to vehicles. Safety monitoring with immediate alerts prevents accidents. Infrastructure integration connects with traffic systems and emergency services for coordinated responses.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-2-17',
@@ -3103,7 +3093,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For comprehensive digital health with global reach, multi-region deployment ensures data sovereignty and HIPAA compliance. Encrypted data storage with fine-grained access controls protects patient information. Telemedicine capabilities using Chime SDK enable secure video consultations. AI diagnostics with SageMaker provide decision support for doctors. Secure provider networks enable safe health data sharing between authorized healthcare providers.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-2-18',
@@ -3117,7 +3107,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For satellite internet constellation with 5K satellites, AWS Ground Station provides global satellite communication with automated tracking. Real-time satellite coordination manages orbital positions and handoffs seamlessly. Dynamic bandwidth allocation optimizes connectivity based on demand and satellite availability. Seamless handoff management ensures uninterrupted service as satellites move. Terrestrial integration provides backup connectivity and emergency service coordination.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-2-19',
@@ -3131,7 +3121,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For global quantum research network, Amazon Braket provides access to quantum computers and simulators with sophisticated scheduling. Hybrid computing capabilities combine classical AWS services with quantum processors for complex algorithms. Secure research collaboration with fine-grained access controls protects intellectual property while enabling sharing. Optimized resource management maximizes utilization of expensive quantum hardware through intelligent queuing and priority systems.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-2-20',
@@ -3145,7 +3135,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For global disaster prediction, a resilient sensor network using IoT Core collects real-time data from seismic, weather, and environmental monitors worldwide. Real-time data processing with Kinesis enables immediate analysis of changing conditions. Predictive modeling using machine learning and high-performance computing forecasts disasters hours or days in advance. Early warning systems provide automated alerts to governments and citizens. Emergency response coordination integrates with international aid organizations for rapid disaster response.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-2-21',
@@ -3159,7 +3149,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For high-frequency cryptocurrency trading, high-performance computing with enhanced networking provides ultra-low latency execution. Real-time fraud detection using machine learning identifies suspicious patterns instantly. Multi-region compliance ensures adherence to different country regulations. Advanced security with WAF, DDoS protection, and encryption protects against cyber attacks. Banking integration enables fiat currency deposits and withdrawals.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-2-22',
@@ -3173,7 +3163,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For global education serving 50M students, multi-region deployment ensures low latency worldwide. Personalized learning using machine learning adapts content to individual student needs. Virtual classrooms with Chime SDK provide real-time video collaboration. Accessibility features ensure compliance with educational standards. Adaptive algorithms continuously adjust difficulty based on performance analytics.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-2-23',
@@ -3187,7 +3177,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For precision agriculture across 100K farms, IoT sensors using IoT Core monitor soil conditions, moisture, and crop health in real-time. Satellite integration with Ground Station provides crop imagery and weather data. Predictive analytics using machine learning forecast yields and detect diseases early. Market integration enables farmers to optimize planting and selling decisions based on commodity prices.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-2-24',
@@ -3201,7 +3191,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For metaverse with millions of concurrent users, edge computing with CloudFront and Local Zones provides ultra-low latency for real-time interactions. Real-time rendering using GPU instances handles massive 3D asset streaming. Content moderation with AI services ensures user safety and appropriate content. Cross-platform support enables seamless experiences across VR headsets, mobile devices, and computers.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-2-25',
@@ -3215,7 +3205,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For global supply chain transparency, Amazon Managed Blockchain provides immutable audit trails for product authenticity and ethical sourcing. Real-time tracking using IoT Core monitors products throughout the supply chain. Sustainability monitoring tracks environmental impact and compliance. Global integration with APIs enables seamless data sharing between manufacturers, distributors, and retailers worldwide.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-2-26',
@@ -3229,7 +3219,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For global gaming with millions of players, edge computing with Local Zones provides ultra-low latency for competitive gameplay. Real-time matchmaking using machine learning creates balanced matches instantly. Advanced anti-cheat systems with AI detect cheating patterns in real-time. Cross-platform support enables seamless play across PC, console, and mobile devices.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-2-27',
@@ -3243,7 +3233,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For city-scale digital twins, IoT integration using IoT Core processes millions of sensor data points in real-time. High-performance computing with GPU instances runs complex urban simulations. Real-time simulation engines model traffic, utilities, and infrastructure interactions. Interactive visualization provides 3D city models for urban planning and optimization.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-2-28',
@@ -3257,7 +3247,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For global news distribution to billions of readers, CloudFront provides worldwide content delivery with edge caching for instant access. Real-time content distribution ensures breaking news reaches all channels simultaneously. Multi-channel publishing automates content formatting for web, mobile, and social media. Fact-checking integration with AI services verifies content authenticity before publication.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-2-29',
@@ -3271,7 +3261,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For precision medicine with genomic data, high-performance computing with specialized instances processes petabytes of genetic information. Privacy-preserving analytics ensure patient data protection while enabling research. International collaboration through secure APIs enables global research sharing. Regulatory compliance with automated reporting supports drug discovery and clinical trials.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-2-30',
@@ -3285,7 +3275,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For global carbon credit trading, Amazon Managed Blockchain provides immutable transaction records and transparent pricing mechanisms. Regulatory compliance ensures adherence to different jurisdictional requirements. Environmental monitoring integration tracks real-time emissions data. Transparent pricing with real-time market data enables fair carbon credit valuation and trading.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-2-31',
@@ -3299,7 +3289,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For global telemedicine, secure video consultations using Chime SDK provide HIPAA-compliant patient-provider interactions. Real-time monitoring with IoT devices tracks patient vitals continuously. Health analytics using machine learning provide diagnostic insights and treatment recommendations. Emergency response systems automatically alert healthcare providers for critical health events.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-2-32',
@@ -3313,7 +3303,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For international smart grid management, AI-powered systems using machine learning predict energy consumption and optimize distribution in real-time. Predictive analytics forecast renewable energy generation based on weather patterns. Real-time optimization balances supply and demand across countries automatically. Market coordination enables energy trading between regions for optimal cost and environmental impact.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-2-33',
@@ -3327,7 +3317,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For global logistics with 1000+ centers, AI-powered optimization using machine learning coordinates routes, inventory, and delivery schedules in real-time. Demand prediction algorithms forecast inventory needs across all locations. Real-time tracking provides package visibility throughout the supply chain. E-commerce integration enables seamless order fulfillment and customer notifications.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-2-34',
@@ -3341,7 +3331,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For global identity verification, biometric authentication using AI services provides secure identity confirmation with facial recognition and document analysis. Fraud detection with machine learning identifies suspicious patterns in real-time. Privacy compliance ensures data protection across different jurisdictional requirements. System integration enables seamless connection with existing identity management systems.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-2-35',
@@ -3355,7 +3345,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For global weather prediction, satellite integration with Ground Station provides comprehensive atmospheric data collection. High-performance computing with specialized instances runs complex weather models and climate simulations. Real-time modeling processes meteorological data continuously for accurate forecasting. Disaster warning systems provide automated alerts for severe weather events to protect public safety.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-2-36',
@@ -3369,7 +3359,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For global social impact, transparent giving with blockchain technology ensures donation traceability and accountability. Volunteer coordination platforms match skills with opportunities worldwide. Impact analytics using machine learning measure and report charitable outcomes effectively. Global integration supports multiple currencies, languages, and payment systems for worldwide accessibility.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-2-37',
@@ -3383,7 +3373,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For precision manufacturing across 500 factories, AI-powered quality control with computer vision detects defects in real-time using high-resolution imagery analysis. Predictive maintenance using machine learning prevents equipment failures before they occur. Real-time optimization adjusts production parameters automatically for optimal efficiency. Robotic integration enables automated quality responses and production adjustments.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-2-38',
@@ -3397,7 +3387,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For global cybersecurity with millions of endpoints, real-time monitoring using machine learning detects threats and anomalies instantly across all systems. Automated response systems contain and neutralize threats without human intervention. Predictive analytics forecast emerging threats based on global security patterns. Security integration connects with existing tools for comprehensive protection and coordinated responses.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-2-39',
@@ -3411,7 +3401,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For international renewable energy trading, blockchain technology provides transparent pricing and immutable transaction records for clean energy certificates. Regulatory compliance ensures adherence to international environmental standards and trading regulations. Grid integration enables real-time energy trading based on production and demand. Environmental monitoring tracks renewable energy generation and carbon impact for accurate certificate validation.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-2-40',
@@ -3425,7 +3415,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For global space debris monitoring, real-time tracking systems process radar and optical data from ground stations worldwide using high-performance computing. Collision prediction algorithms run continuous orbital mechanics simulations to forecast potential impacts. Automated warning systems alert satellite operators of collision risks instantly. International coordination enables global space agencies to share tracking data and coordinate satellite maneuvers for space safety.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       }
     ],
     'exam-3': [
@@ -3441,7 +3431,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For mission-critical financial trading with sub-millisecond requirements, ultra-high-performance computing with enhanced networking and local NVMe storage provides optimal latency. Real-time fraud detection using machine learning analyzes transaction patterns instantly. Multi-jurisdiction compliance ensures adherence to banking regulations across 50+ countries. Advanced risk management monitors positions and market exposure continuously. Central bank integration enables direct settlement and regulatory reporting.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-3-2',
@@ -3455,7 +3445,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For autonomous vehicle fleet with 1M vehicles, real-time sensor processing using edge computing and IoT Core handles massive data streams from cameras, lidar, and radar. Predictive maintenance using machine learning prevents vehicle breakdowns before they occur. Traffic optimization coordinates with city infrastructure for optimal routing. Emergency coordination enables immediate response to accidents or system failures. OTA updates ensure vehicles have latest safety and performance improvements.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-3-3',
@@ -3469,7 +3459,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For global pandemic monitoring across 200 countries, real-time health data processing using secure APIs collects surveillance data from hospitals and labs worldwide. Epidemiological modeling with machine learning predicts disease spread patterns and outbreak risks. International coordination enables rapid information sharing between health authorities. Early warning systems provide automated alerts for potential pandemic threats. WHO integration ensures global health security coordination.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-3-4',
@@ -3483,7 +3473,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For quantum-secured communications, quantum key distribution using specialized hardware provides unbreakable encryption keys. Post-quantum cryptography protects against future quantum computer attacks. Eavesdropping detection using quantum principles immediately identifies security breaches. Secure system integration connects with existing military and government communication networks. Multi-layer security ensures protection even if individual components are compromised.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-3-5',
@@ -3497,7 +3487,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For brain-computer interface research, neural data processing using high-performance computing handles massive brain signal datasets with microsecond precision. Brain simulation with specialized GPU clusters models neural networks and cognitive processes. Privacy protection ensures patient neural data security with advanced encryption. Real-time interactions enable immediate brain-computer communication for prosthetic control. Medical device integration connects with neural implants and monitoring equipment.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-3-6',
@@ -3511,7 +3501,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For global renewable energy management, weather prediction using machine learning forecasts solar and wind generation capacity. Energy optimization algorithms balance supply and demand across multiple time zones. Grid stability management prevents blackouts during renewable energy fluctuations. Real-time energy trading enables efficient distribution of clean energy. Carbon credit tracking provides automated environmental compliance reporting.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-3-7',
@@ -3525,7 +3515,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For satellite internet constellation, dynamic routing algorithms optimize signal paths through multiple satellites for lowest latency. Global coverage coordination ensures seamless handoffs between satellites as they orbit. Failure resilience automatically reroutes traffic when satellites malfunction. Terrestrial integration connects satellite network with existing internet infrastructure. Emergency communication provides backup connectivity during disasters.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-3-8',
@@ -3539,7 +3529,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For city digital twin platform, real-time data processing using IoT Core and edge computing handles millions of sensors monitoring traffic, utilities, and infrastructure. Advanced simulations using high-performance computing model disaster scenarios and urban development impacts. Collaborative planning enables multiple stakeholders to interact with the digital twin simultaneously. Predictive analytics forecast infrastructure needs and potential problems.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-3-9',
@@ -3553,7 +3543,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For global ocean monitoring, oceanographic data processing using specialized analytics handles massive datasets from underwater sensors and satellites. Climate modeling with machine learning predicts ocean temperature and current changes. Ecosystem monitoring tracks marine life populations and migration patterns. International coordination enables data sharing between research institutions and environmental agencies worldwide.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-3-10',
@@ -3567,7 +3557,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For global agricultural optimization, precision farming uses satellite imagery and IoT sensors to provide field-specific recommendations for irrigation, fertilization, and pest control. Yield prediction models forecast crop production using weather patterns and soil conditions. Market analysis predicts commodity prices and optimal harvest timing. Supply chain optimization coordinates from farm to consumer for maximum efficiency.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-3-11',
@@ -3581,7 +3571,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For metaverse platform with millions of users, real-time rendering using GPU clusters and edge computing provides low-latency 3D graphics. Spatial computing handles complex virtual world physics and interactions. Avatar synchronization ensures seamless user representation across virtual spaces. Virtual commerce enables secure transactions for digital assets and virtual goods.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-3-12',
@@ -3595,7 +3585,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For disaster response coordination, predictive modeling using weather and geological data forecasts disaster impacts and optimal resource deployment. Resource coordination tracks and allocates emergency personnel, equipment, and supplies in real-time. International collaboration enables rapid aid coordination between countries and organizations. Resilient communication maintains connectivity during infrastructure failures using satellite and mesh networks.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-3-13',
@@ -3609,7 +3599,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For genomic research consortium, secure data processing using specialized bioinformatics tools handles massive DNA sequence datasets with advanced encryption. Privacy protection ensures genetic data anonymization and access controls. International collaboration enables secure data sharing between research institutions while maintaining patient privacy. Regulatory compliance ensures adherence to genetic privacy laws across multiple jurisdictions.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-3-14',
@@ -3623,7 +3613,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For supply chain transparency, blockchain verification provides immutable product provenance records from source to consumer. Real-time tracking using IoT sensors monitors product location, condition, and handling throughout the supply chain. Ethical sourcing monitoring ensures compliance with labor and environmental standards. Global integration connects manufacturers, suppliers, and retailers in a unified transparency network.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-3-15',
@@ -3637,7 +3627,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For carbon management platform, emissions monitoring using satellite imagery and IoT sensors tracks CO2 levels from industrial sources and natural systems. Sequestration tracking monitors forest carbon storage and geological carbon capture projects. Carbon trading enables automated carbon credit transactions and market analysis. Climate analysis provides predictive modeling for carbon reduction strategies and policy impact assessment.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-3-16',
@@ -3651,7 +3641,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For smart manufacturing network, predictive maintenance using IoT sensors and machine learning prevents equipment failures before they occur. Supply chain optimization coordinates just-in-time delivery across global suppliers. Quality control uses computer vision and automated testing to ensure product standards. Global coordination synchronizes production schedules and inventory management across all facilities.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-3-17',
@@ -3665,7 +3655,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For digital identity verification, biometric authentication using advanced algorithms provides secure user identification with fingerprint, facial, and voice recognition. Fraud prevention uses machine learning to detect identity theft and suspicious activities. Privacy protection ensures personal data encryption and user consent management. International compliance enables cross-border identity verification while meeting local privacy regulations.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-3-18',
@@ -3679,7 +3669,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For quantum computing research, hardware access provides remote connectivity to quantum processors and quantum annealers. Quantum simulation uses specialized algorithms to model complex quantum systems and test quantum algorithms. Secure communication implements quantum key distribution for unbreakable research data protection. Classical integration enables hybrid quantum-classical computing workflows and data analysis.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-3-19',
@@ -3693,7 +3683,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For wildlife conservation platform, AI-powered species recognition automatically identifies animals from camera trap images and tracks population changes. Behavior analysis monitors migration patterns, breeding cycles, and habitat usage. Anti-poaching systems use predictive analytics to identify high-risk areas and coordinate ranger patrols. Global coordination enables data sharing between conservation organizations and government agencies worldwide.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-3-20',
@@ -3707,7 +3697,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For space debris tracking, precision tracking uses ground-based radar and optical telescopes to monitor millions of orbital objects with centimeter accuracy. Collision prediction algorithms calculate orbital trajectories and identify potential satellite collisions days in advance. Debris removal coordination manages active debris removal missions and orbital cleanup operations. International cooperation enables data sharing between space agencies for comprehensive orbital situational awareness.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-3-21',
@@ -3721,7 +3711,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For cryptocurrency exchange with millions of TPS, high-frequency trading engines using specialized hardware provide microsecond order execution. Multi-layer security includes cold storage, multi-signature wallets, and real-time fraud detection. Regulatory compliance ensures adherence to financial regulations across multiple jurisdictions. Banking integration enables fiat currency deposits and withdrawals through traditional financial systems.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-3-22',
@@ -3735,7 +3725,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For global telemedicine platform, secure consultations use encrypted video conferencing with HIPAA-compliant infrastructure. Medical imaging analysis provides AI-powered diagnostic assistance and secure image sharing. EHR integration connects with existing hospital systems for comprehensive patient records. Emergency services integration enables rapid response coordination and specialist consultations during medical emergencies.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-3-23',
@@ -3749,7 +3739,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For smart city infrastructure, resource optimization uses machine learning to balance energy consumption, water distribution, and traffic flow in real-time. Predictive maintenance prevents infrastructure failures by analyzing sensor data from roads, bridges, and utilities. Emergency coordination integrates with police, fire, and medical services for rapid response. IoT integration connects millions of sensors throughout the city for comprehensive monitoring.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-3-24',
@@ -3763,7 +3753,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For adaptive learning platform, personalized content delivery uses AI algorithms to adjust difficulty and learning paths based on individual student performance. Multilingual support provides automatic translation and culturally appropriate content. Real-time collaboration enables virtual classrooms and group projects across different time zones. Privacy protection ensures student data security with COPPA and GDPR compliance.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-3-25',
@@ -3777,7 +3767,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For food safety monitoring, contamination detection uses IoT sensors and blockchain technology to track food products throughout the supply chain. Outbreak prediction analyzes consumption patterns and health data to identify potential foodborne illness sources. Supply chain tracking provides complete traceability from farm to consumer. Health agency coordination enables rapid response to contamination events and product recalls.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-3-26',
@@ -3791,7 +3781,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For autonomous drone delivery network, air traffic management coordinates millions of drones to prevent collisions and optimize airspace usage. Route optimization uses real-time traffic, weather, and delivery priority data. Safety protocols include automated emergency landing, obstacle avoidance, and fail-safe mechanisms. Aviation integration ensures compliance with air traffic control and regulatory requirements.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-3-27',
@@ -3805,7 +3795,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For digital forensics platform, encrypted analysis uses specialized algorithms to examine digital evidence while maintaining integrity. Evidence preservation ensures tamper-proof storage with cryptographic verification. Legal compliance meets international standards for digital evidence admissibility. International coordination enables secure case sharing between law enforcement agencies worldwide.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-3-28',
@@ -3819,7 +3809,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For mental health platform, AI therapy provides personalized therapeutic interventions using natural language processing and psychological frameworks. Crisis intervention includes real-time risk assessment and immediate professional response. Healthcare integration connects with therapists and medical providers for comprehensive care. Cultural adaptation ensures appropriate support across different cultural contexts and languages.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-3-29',
@@ -3833,7 +3823,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For renewable energy trading, real-time pricing uses supply and demand algorithms to optimize energy costs and grid efficiency. Grid management ensures stability during peer-to-peer transactions and renewable energy fluctuations. Storage optimization coordinates battery systems to balance supply and demand. Carbon tracking provides automated environmental impact reporting and carbon credit generation.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-3-30',
@@ -3847,7 +3837,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For archaeological research network, 3D site modeling uses photogrammetry and LiDAR to create detailed digital reconstructions of excavation sites. Artifact analysis provides AI-powered classification and historical context matching. Preservation tools monitor environmental conditions and predict conservation needs. Global collaboration enables secure data sharing between archaeologists, museums, and cultural institutions worldwide.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-3-31',
@@ -3861,7 +3851,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For space tourism platform, mission planning coordinates orbital mechanics, life support requirements, and passenger safety protocols. Safety systems include real-time health monitoring, emergency evacuation procedures, and backup life support. Training systems provide virtual reality astronaut preparation and safety certification. Space traffic control coordinates with international space agencies for safe orbital operations.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-3-32',
@@ -3875,7 +3865,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For climate modeling consortium, distributed computing coordinates supercomputing resources across multiple institutions for massive climate simulations. Data integration combines satellite observations, weather stations, and ocean buoys for comprehensive modeling. Accuracy validation uses ensemble modeling and historical data verification. Policy analysis translates climate predictions into actionable recommendations for governments and organizations.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-3-33',
@@ -3889,7 +3879,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For digital art authentication, AI analysis examines brushstrokes, color patterns, and artistic techniques to verify authenticity. Blockchain provenance provides immutable ownership records and transaction history. Forgery detection uses machine learning to identify suspicious patterns and inconsistencies. Market integration connects with auction houses, galleries, and insurance companies for comprehensive art ecosystem support.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-3-34',
@@ -3903,7 +3893,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For precision agriculture platform, satellite analysis provides field-level crop monitoring and growth pattern analysis. Predictive modeling forecasts optimal planting, irrigation, and harvest timing based on weather and soil conditions. Resource optimization minimizes water, fertilizer, and pesticide usage while maximizing yields. Market integration provides commodity price forecasting and supply chain coordination for optimal profitability.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-3-35',
@@ -3917,7 +3907,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For underwater exploration platform, autonomous vehicles provide deep-sea navigation and data collection in extreme pressure environments. Pressure management systems ensure equipment reliability at crushing depths. Communication systems maintain connectivity through acoustic and satellite links. Research integration enables real-time collaboration between surface vessels, underwater vehicles, and global research institutions.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-3-36',
@@ -3931,7 +3921,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For disaster prediction platform, seismic analysis processes earthquake data from global sensor networks to predict geological events. Weather modeling combines satellite data and atmospheric sensors for severe weather prediction. Early warning systems provide automated alerts to populations at risk. Emergency coordination integrates with government agencies and international organizations for rapid disaster response.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-3-37',
@@ -3945,7 +3935,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For VR training platform, realistic simulations provide high-fidelity training environments with accurate physics and haptic feedback. Progress tracking monitors skill development and competency achievement. Safety protocols ensure training scenarios meet professional standards and regulatory requirements. Certification management provides verified credentials and continuing education tracking for professional development.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-3-38',
@@ -3959,7 +3949,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For smart waste management, predictive analytics forecast waste generation patterns based on population density, events, and seasonal factors. Route optimization minimizes fuel consumption and collection time using real-time traffic and bin sensor data. Recycling coordination tracks materials through sorting facilities and ensures proper processing. Environmental monitoring measures carbon footprint and optimizes waste-to-energy conversion.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-3-39',
@@ -3973,7 +3963,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For personalized medicine platform, genetic analysis processes DNA sequences to identify drug metabolism patterns and disease susceptibilities. Treatment optimization uses machine learning to recommend personalized therapies based on genetic and clinical data. Clinical trial matching connects patients with relevant research studies. Privacy protection ensures genetic data security with advanced encryption and consent management.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-3-40',
@@ -3987,7 +3977,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For quantum internet network, entanglement distribution creates quantum-correlated particles across global distances for secure communication. Quantum encryption provides unbreakable security using quantum key distribution protocols. Coherence management maintains quantum states during transmission using error correction and environmental isolation. Classical integration bridges quantum and traditional networks for comprehensive connectivity.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       }
     ],
     'exam-4': [
@@ -4003,7 +3993,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For e-sports platform, low-latency gaming uses edge computing and dedicated game servers to minimize input lag for competitive play. Anti-cheat systems employ machine learning to detect suspicious player behavior and game manipulation. Tournament management coordinates brackets, scheduling, and prize distribution across multiple time zones. Global streaming provides real-time spectator experiences with minimal delay.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-4-2',
@@ -4017,7 +4007,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For digital twin manufacturing, IoT integration connects thousands of sensors monitoring temperature, pressure, vibration, and production metrics. Predictive analytics forecast equipment failures and maintenance needs. Simulation engines model production scenarios and optimize processes. Automated optimization adjusts production parameters in real-time based on quality metrics and efficiency targets.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-4-3',
@@ -4031,7 +4021,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For carbon footprint tracking, comprehensive emissions monitoring uses satellite data, IoT sensors, and supply chain integration to track greenhouse gases across all sources. Reduction analytics provide personalized recommendations for emissions reduction. Offset coordination connects users with verified carbon offset projects. Regulatory integration ensures compliance with environmental standards and carbon trading requirements.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-4-4',
@@ -4045,7 +4035,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For autonomous shipping network, AI navigation uses satellite imagery, weather data, and maritime traffic to optimize routes and avoid hazards. Route optimization minimizes fuel consumption and delivery time while considering weather patterns. Port coordination schedules arrivals and departures to minimize waiting time. Security monitoring tracks cargo integrity and prevents theft or tampering.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-4-5',
@@ -4059,7 +4049,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For precision medicine platform, privacy-preserving analytics use federated learning and differential privacy to analyze genomic data without exposing individual patient information. Clinical trial management coordinates patient recruitment, treatment protocols, and outcome tracking. Regulatory compliance ensures adherence to medical research standards and genetic privacy laws. Collaborative research enables secure data sharing between institutions.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-4-6',
@@ -4073,7 +4063,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For smart agriculture platform, satellite analysis provides field-level crop monitoring and growth pattern detection. Predictive modeling forecasts optimal planting, irrigation, and harvest timing. Resource optimization minimizes water and fertilizer usage while maximizing yields. Market integration provides commodity price forecasting and supply chain coordination for optimal profitability.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-4-7',
@@ -4087,7 +4077,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For cybersecurity threat intelligence, malware analysis uses sandboxing and behavioral analysis to identify new threats and attack patterns. Attack prediction models forecast likely targets and attack vectors based on historical data. Intelligence sharing enables real-time threat information exchange between organizations. Automated response systems implement immediate countermeasures against detected threats.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-4-8',
@@ -4101,7 +4091,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For renewable energy storage network, predictive analytics forecast renewable energy generation and demand patterns. Grid optimization coordinates storage charging and discharging to maintain grid stability. Storage coordination manages multiple storage technologies for optimal efficiency. Energy trading enables profitable storage arbitrage and grid services revenue.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-4-9',
@@ -4115,7 +4105,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For digital identity platform, biometric authentication uses advanced algorithms for secure user identification with fingerprint, facial, and voice recognition. Blockchain verification provides immutable identity records and transaction history. Privacy protection ensures personal data encryption and user consent management. Regulatory compliance enables cross-border identity verification while meeting local privacy laws.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-4-10',
@@ -4129,7 +4119,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For space debris removal platform, autonomous spacecraft perform targeted debris capture and deorbiting missions. Collision prediction algorithms calculate orbital trajectories and identify high-risk debris objects. Mission coordination manages multiple removal spacecraft and ground control operations. International cooperation enables data sharing and coordinated cleanup efforts between space agencies.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-4-11',
@@ -4143,7 +4133,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For VR therapy platform, biometric monitoring tracks heart rate, stress levels, and physiological responses during therapy sessions. Safety protocols include panic button functionality and automatic session termination for distress. Progress tracking monitors therapeutic outcomes and treatment effectiveness. Healthcare integration connects with therapists and medical providers for comprehensive care coordination.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-4-12',
@@ -4157,7 +4147,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For autonomous mining platform, robotic systems perform excavation, processing, and transportation with minimal human intervention. Predictive analytics optimize extraction patterns and equipment maintenance. Safety monitoring ensures worker protection and emergency response. Environmental compliance tracks impact and ensures regulatory adherence.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-4-13',
@@ -4171,7 +4161,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For digital art marketplace, blockchain authentication provides immutable ownership records and provenance tracking. NFT verification ensures artwork authenticity and prevents counterfeiting. Royalty management automatically distributes payments to artists for secondary sales. Secure transactions support multiple cryptocurrencies and traditional payment methods.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-4-14',
@@ -4185,7 +4175,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For pandemic early warning system, genomic analysis tracks pathogen mutations and predicts virulence changes. Outbreak prediction models forecast disease spread patterns and high-risk areas. Vaccine coordination manages development timelines and distribution logistics. International collaboration enables rapid information sharing and coordinated response efforts.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-4-15',
@@ -4199,7 +4189,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For smart water management, quality monitoring uses IoT sensors to detect chemical, biological, and physical contaminants in real-time. Contamination prediction models forecast pollution events and source identification. Treatment optimization adjusts filtration and chemical processes for optimal water quality. Regulatory compliance ensures adherence to health and environmental standards.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-4-16',
@@ -4213,7 +4203,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For autonomous construction platform, robotic systems perform precise building tasks including welding, assembly, and material placement. 3D printing creates custom building components and structural elements. Structural monitoring ensures building integrity during construction. Regulatory compliance verifies adherence to building codes and safety standards.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-4-17',
@@ -4227,7 +4217,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For ocean digital twin platform, oceanographic modeling simulates currents, temperature, and chemical composition with high accuracy. Marine life tracking monitors fish populations, migration patterns, and ecosystem health. Climate prediction forecasts ocean changes and impacts on marine ecosystems. Conservation coordination manages protected areas and sustainable fishing practices.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-4-18',
@@ -4241,7 +4231,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For quantum sensor network, ultra-sensitive detection uses quantum entanglement and superposition for measurements beyond classical limits. Global coordination synchronizes measurements across multiple locations for enhanced accuracy. Data integrity ensures quantum measurement authenticity and prevents tampering. Real-time analysis processes quantum sensor data for immediate scientific insights.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-4-19',
@@ -4255,7 +4245,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For personalized nutrition platform, genetic analysis identifies food sensitivities and nutrient metabolism patterns. Microbiome tracking monitors gut health and dietary impacts. Health monitoring tracks biomarkers and nutritional outcomes. Food integration connects with suppliers for personalized meal delivery and ingredient sourcing.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-4-20',
@@ -4269,7 +4259,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For space solar power platform, optimized collection uses large orbital solar arrays with sun-tracking capabilities. Microwave transmission beams power to Earth with precise targeting and safety controls. Ground coordination manages receiving stations and power conversion. Grid integration connects space-based power with terrestrial electrical networks.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-4-21',
@@ -4283,7 +4273,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For brain-computer interface platform, high-resolution brain sensing captures neural signals with microsecond precision and minimal invasiveness. Real-time processing translates neural patterns into device commands with low latency. Medical compliance ensures patient safety and regulatory adherence. Device integration enables control of prosthetics, computers, and environmental systems.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-4-22',
@@ -4297,7 +4287,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For atmospheric carbon capture platform, optimized filtration uses advanced materials and AI-controlled systems for maximum CO2 removal efficiency. Energy management coordinates with renewable sources to minimize carbon footprint. Product conversion transforms captured CO2 into fuels, plastics, and building materials. Market integration connects with carbon credit systems and industrial buyers.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-4-23',
@@ -4311,7 +4301,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For digital archaeology platform, AI discovery analyzes satellite imagery and ground-penetrating radar to identify potential archaeological sites. Virtual excavation creates detailed 3D models and simulations of dig sites. Site protection monitors threats and coordinates preservation efforts. Cultural integration connects with museums for artifact display and public education.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-4-24',
@@ -4325,7 +4315,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For quantum communication network, coherence management maintains quantum states during transmission using error correction and environmental isolation. Eavesdropping detection uses quantum mechanics principles to identify unauthorized access attempts. Global connectivity links quantum networks across continents. Security integration provides quantum-secured channels for critical communications.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-4-25',
@@ -4339,7 +4329,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For synthetic biology platform, automated design uses AI algorithms to create custom organisms for specific applications. Biosafety protocols ensure containment and prevent environmental release of engineered organisms. Production scaling manages bioreactor systems for commercial manufacturing. Regulatory compliance ensures adherence to biotechnology safety standards.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-4-26',
@@ -4353,7 +4343,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For asteroid mining platform, robotic fleets perform autonomous mining operations with minimal Earth control delay. Extraction optimization identifies high-value asteroids and efficient mining techniques. Mission safety ensures spacecraft protection and emergency response capabilities. Market integration coordinates with space manufacturing and Earth commodity markets.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-4-27',
@@ -4367,7 +4357,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For neural prosthetics platform, brain integration uses implanted electrodes to capture motor intentions and control prosthetic devices. Natural movement provides fluid, intuitive control that mimics biological limb function. Sensory feedback transmits touch, pressure, and temperature sensations back to the brain. Medical coordination ensures proper fitting, training, and long-term care.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-4-28',
@@ -4381,7 +4371,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For ocean thermal energy platform, optimized extraction uses advanced heat exchangers and working fluids for maximum efficiency. Environmental monitoring ensures minimal impact on marine ecosystems and water temperature. Grid integration provides stable power delivery to coastal electrical networks. Marine coordination manages interactions with shipping, fishing, and research activities.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-4-29',
@@ -4395,7 +4385,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For digital twin Earth platform, massive data processing handles petabytes of satellite imagery, sensor data, and environmental measurements. Complex modeling simulates atmospheric, oceanic, and geological processes with high fidelity. Satellite coordination manages data from hundreds of Earth observation satellites. Institutional integration enables collaboration between climate scientists, governments, and international organizations.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-4-30',
@@ -4409,7 +4399,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For fusion energy network, plasma optimization uses magnetic confinement and heating systems to maintain fusion reactions. Safety systems ensure reactor containment and emergency shutdown capabilities. Fuel management coordinates tritium breeding and deuterium supply chains. Grid coordination provides stable power delivery and load balancing across the electrical network.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-4-31',
@@ -4423,7 +4413,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For space elevator platform, tether management monitors carbon nanotube cable tension, vibration, and environmental stresses. Climber systems provide electromagnetic propulsion and cargo handling capabilities. Traffic coordination manages multiple climbers and orbital rendezvous. Structural monitoring ensures tether integrity and prevents catastrophic failure.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-4-32',
@@ -4437,7 +4427,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For molecular manufacturing platform, atomic control uses programmable assemblers to position individual atoms and molecules with precision. Quality assurance monitors product specifications at the molecular level. Safety protocols prevent dangerous reactions and contamination. Supply chain integration coordinates raw materials and finished product distribution.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-4-33',
@@ -4451,7 +4441,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For consciousness uploading platform, complete neural mapping captures every neuron and synapse with quantum-level precision. Personality preservation maintains individual identity and memories during transfer. Experience continuity ensures seamless transition between biological and digital consciousness. Ethical oversight addresses consent, identity, and societal implications.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-4-34',
@@ -4465,7 +4455,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For terraforming platform, atmospheric processing releases greenhouse gases and oxygen to create breathable atmosphere. Magnetic field generation protects the planet from solar radiation and atmospheric loss. Ecosystem engineering introduces plants, microorganisms, and eventually complex life forms. Scientific coordination manages the centuries-long transformation process.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-4-35',
@@ -4479,7 +4469,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For time manipulation platform, paradox prevention uses quantum mechanics and causal loop detection to prevent timeline disruption. Timeline stability monitors temporal experiments for unintended consequences. Experimental management coordinates complex temporal research across multiple facilities. Physics integration connects with quantum mechanics and relativity research for theoretical foundation.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-4-36',
@@ -4493,7 +4483,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For dimensional gateway platform, stable gateways use quantum tunneling and exotic matter to create reliable interdimensional passages. Traveler safety ensures protection from dimensional hazards and safe return protocols. Contamination prevention manages the exchange of matter and information between universes. Multiverse coordination tracks dimensional variations and parallel universe interactions.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-4-37',
@@ -4507,7 +4497,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For reality simulation platform, quantum computing provides unlimited computational power for perfect world simulation. Perfect realism creates indistinguishable virtual experiences using advanced physics engines. Resource management optimizes quantum processors for multiple simultaneous simulations. Safety protocols prevent psychological harm and reality dissociation.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-4-38',
@@ -4521,7 +4511,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For universal translator platform, linguistic AI understands grammar, syntax, and semantic meaning across all human languages. Cultural adaptation ensures appropriate context and cultural sensitivity. Non-verbal processing interprets gestures, expressions, and body language. Xenolinguistic capabilities prepare for potential alien language structures and communication methods.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-4-39',
@@ -4535,7 +4525,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For matter teleportation platform, perfect reconstruction ensures exact atomic-level recreation at the destination. Error prevention uses quantum error correction and redundant scanning systems. Quantum coherence maintains entanglement across vast distances for instantaneous transfer. Safety coordination manages teleportation traffic and prevents accidents.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-4-40',
@@ -4549,7 +4539,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For AGI coordination platform, alignment protocols ensure AI systems remain beneficial to humanity and follow human values. Risk management prevents existential threats and maintains control over AGI development. Resource coordination optimizes computational power across multiple AGI systems. Human oversight maintains ultimate decision-making authority and ethical guidance.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       }
     ],
     'exam-5': [
@@ -4565,7 +4555,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For interstellar communication network, quantum entanglement enables instantaneous communication across galactic distances without light-speed delays. Exotic matter relays amplify and maintain quantum coherence for long-distance transmission. Multi-species protocols accommodate different communication methods and cognitive patterns. Diplomatic coordination manages first contact scenarios and interspecies relations.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-5-2',
@@ -4579,7 +4569,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For consciousness preservation platform, complete neural capture records every neuron, synapse, and quantum state with perfect fidelity. Perfect restoration recreates consciousness with complete continuity of experience and memory. Massive storage manages exabytes of neural data with quantum-level precision. Ethical oversight addresses consent, identity, and societal implications of digital immortality.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-5-3',
@@ -4593,7 +4583,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For weather control platform, atmospheric manipulation uses ionospheric heating and electromagnetic fields to influence weather patterns. Global coordination ensures weather changes in one region do not cause disasters elsewhere. Safety protocols prevent dangerous weather events and environmental damage. Environmental monitoring tracks ecosystem impacts and climate effects.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-5-4',
@@ -4607,7 +4597,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For genetic enhancement platform, safety protocols ensure genetic modifications are thoroughly tested and reversible. Discrimination prevention protects against genetic-based social inequality. Equity management ensures enhancement access across all socioeconomic levels. Ethical oversight addresses consent, enhancement limits, and societal implications.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-5-5',
@@ -4621,7 +4611,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For holographic entertainment platform, photorealistic rendering creates indistinguishable 3D objects using advanced light field technology. Safety protocols prevent eye damage and ensure viewer protection. Massive computing provides real-time rendering of complex holographic scenes. Content coordination manages creation tools and distribution networks for holographic media.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-5-6',
@@ -4635,7 +4625,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For nano-medicine platform, molecular robots perform precise cellular interventions with programmable targeting and therapeutic actions. Biocompatibility protocols ensure nanobots integrate safely with biological systems. Immune system coordination prevents rejection and autoimmune responses. Precise medical control enables real-time monitoring and adjustment of nanobot behavior.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-5-7',
@@ -4649,7 +4639,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For memory enhancement platform, neural implants provide direct brain-computer interfaces for memory storage and retrieval. Perfect recall enables complete information retention and instant access. Data security protects stored memories from unauthorized access or corruption. Educational integration optimizes learning processes and knowledge acquisition.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-5-8',
@@ -4663,7 +4653,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For ecosystem restoration platform, automated reforestation uses drone swarms and robotic systems for large-scale tree planting and habitat creation. Species management coordinates reintroduction programs and population monitoring. Climate engineering modifies local weather patterns to support ecosystem recovery. Biodiversity coordination ensures genetic diversity and species protection.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-5-9',
@@ -4677,7 +4667,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For telepathic communication platform, mind-to-mind communication uses quantum-entangled neural interfaces for direct thought transmission. Thought privacy ensures mental communications remain secure and consensual. Intrusion prevention protects against unauthorized mind reading or mental manipulation. Ethical oversight addresses consent, mental autonomy, and societal implications.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-5-10',
@@ -4691,7 +4681,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For anti-aging platform, cellular restoration repairs DNA damage and restores telomeres for biological age reversal. Genetic therapy eliminates aging-related genetic factors and enhances longevity genes. Regenerative medicine replaces aged organs and tissues with young, healthy alternatives. Demographic coordination manages societal impacts of extended lifespans.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-5-11',
@@ -4705,7 +4695,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For gravity manipulation platform, field manipulation uses exotic matter and energy fields to create controlled gravitational effects. Stability control ensures gravitational fields remain predictable and safe. Anomaly prevention protects against dangerous gravitational distortions. Energy management optimizes power consumption for sustained gravity control.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-5-12',
@@ -4719,7 +4709,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For dream sharing platform, neural sharing enables real-time dream transmission and shared dream experiences. Privacy protection ensures dreams remain confidential unless explicitly shared. Nightmare prevention filters disturbing content and protects mental health. Psychological coordination manages therapeutic applications and dream analysis.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-5-13',
@@ -4733,7 +4723,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For invisibility technology platform, optical manipulation uses metamaterials to bend light around objects for true invisibility. Safety protocols prevent accidents and ensure user protection during invisible operations. Misuse prevention includes authentication and monitoring systems. Security coordination manages military and law enforcement applications.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-5-14',
@@ -4747,7 +4737,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For force field technology platform, energy barriers create impenetrable protective shields using controlled electromagnetic and exotic matter fields. Field integrity maintains barrier strength and prevents penetration. Power management optimizes energy consumption for sustained field operation. Military coordination integrates force fields with defense systems and tactical applications.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-5-15',
@@ -4761,7 +4751,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For psychic abilities platform, ESP enhancement uses neural stimulation and quantum field manipulation to amplify natural psychic abilities. Phenomenon validation employs rigorous scientific testing to verify psychic effects. Mental protection prevents psychological damage from psychic enhancement. Research coordination manages parapsychology studies and ethical considerations.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-5-16',
@@ -4775,7 +4765,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For shapeshifting technology platform, programmable matter enables controlled physical transformation and biological adaptation. Biological adaptation ensures transformed bodies remain functional and healthy. Safety protocols prevent dangerous transformations and biological failures. Identity management maintains personal identification despite physical changes.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-5-17',
@@ -4789,7 +4779,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For energy being communication platform, quantum communication uses field manipulation to interact with non-physical entities. Entity protocols establish safe communication methods and mutual understanding. Dimensional safety prevents dangerous breaches and entity conflicts. Xenobiology coordination studies energy-based life forms and consciousness.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-5-18',
@@ -4803,7 +4793,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For resurrection technology platform, cellular regeneration repairs death-related damage and restores biological function. Consciousness restoration retrieves and reinstalls stored consciousness and memories. Temporal manipulation reverses death-related changes and biological decay. Ethical oversight addresses consent, identity, and religious considerations.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-5-19',
@@ -4817,7 +4807,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For omniscience platform, universal knowledge provides access to all information across space and time. Infinite data management handles unlimited information storage and retrieval. Accuracy verification ensures all knowledge is correct and up-to-date. Educational coordination optimizes learning and knowledge distribution.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-5-20',
@@ -4831,7 +4821,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For omnipotence platform, unlimited power enables complete control over fundamental forces and reality itself. Reality manipulation allows modification of physical laws and universal constants. Safety protocols prevent accidental universe destruction and reality collapse. Cosmic coordination manages interactions between omnipotent beings and universal stability.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-5-21',
@@ -4845,7 +4835,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For multiverse exploration platform, dimensional portals provide safe passage between parallel universes with controlled entry and exit points. Reality mapping catalogs dimensional variations and universe characteristics. Safety protocols prevent travelers from becoming lost or contaminated by alternate realities. Research coordination manages scientific studies across multiple universes.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-5-22',
@@ -4859,7 +4849,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For consciousness evolution platform, consciousness acceleration uses advanced meditation technology and neural stimulation to rapidly develop mental capabilities. Safety monitoring prevents psychological damage and mental instability during evolution. Spiritual coordination integrates with religious and philosophical institutions. Research integration advances understanding of consciousness and spiritual development.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-5-23',
@@ -4873,7 +4863,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For reality creation platform, universe manifestation uses consciousness projection to create fully functional personal realities. Stability control ensures created universes remain coherent and sustainable. Conflict prevention manages interactions between overlapping personal realities. Cosmic coordination maintains universal order and prevents reality collapse.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-5-24',
@@ -4887,7 +4877,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For divine communication platform, consciousness elevation prepares human minds for contact with higher-dimensional beings. Spiritual safety protects against divine overload and consciousness damage. Sacred protocols ensure respectful and appropriate divine communication. Religious coordination integrates with theological institutions and spiritual authorities.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-5-25',
@@ -4901,7 +4891,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For universal harmony platform, infinite synchronization coordinates all existence across dimensions and timelines for perfect balance. Chaos prevention detects and corrects disturbances before they disrupt universal harmony. Harmony protocols maintain optimal relationships between all cosmic elements. Cosmic governance ensures universal peace and coordinated evolution.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-5-26',
@@ -4915,7 +4905,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For transcendence platform, consciousness evolution guides beings through stages of transcendence from physical to pure energy existence. Identity preservation maintains individual consciousness and personality during transformation. Energy transformation safely converts physical matter to conscious energy. Cosmic coordination manages transcended beings and universal evolution.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-5-27',
@@ -4929,7 +4919,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For creation mastery platform, universe design teaches fundamental principles of reality creation and cosmic architecture. Reality manifestation enables practical application of creative forces for universe building. Safety protocols prevent dangerous creations and reality instabilities. Cosmic coordination manages created universes and maintains universal order.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-5-28',
@@ -4943,7 +4933,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For infinite wisdom platform, infinite knowledge provides access to all information and understanding across existence. Perfect understanding enables complete comprehension of complex cosmic principles. Integration protocols help beings safely absorb and apply infinite wisdom. Cosmic coordination manages universal knowledge distribution and wisdom sharing.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-5-29',
@@ -4957,7 +4947,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For perfect love platform, unconditional love generation creates pure love energy that heals all forms of suffering. Healing energy repairs emotional, mental, and spiritual damage through love transmission. Compassion distribution ensures all beings receive appropriate love and care. Spiritual coordination integrates with divine love sources and cosmic compassion.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-5-30',
@@ -4971,7 +4961,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For ultimate truth platform, absolute revelation provides complete understanding of fundamental reality and existence. Reality comprehension enables beings to safely process ultimate truth without mental breakdown. Shock prevention protects consciousness from overwhelming truth revelations. Cosmic coordination manages truth distribution and universal enlightenment.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-5-31',
@@ -4985,7 +4975,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For eternal bliss platform, eternal happiness generates permanent states of perfect joy and fulfillment. Perfect fulfillment ensures all desires and needs are completely satisfied. Sustainability protocols maintain bliss without creating dependency or stagnation. Cosmic coordination manages universal happiness and joy distribution.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-5-32',
@@ -4999,7 +4989,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For infinite potential platform, unlimited possibilities enable beings to achieve any conceivable goal or capability. Capability transcendence removes all limitations and barriers to achievement. Safety protocols prevent dangerous potential manifestations and capability conflicts. Cosmic coordination manages universal potential distribution and development.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-5-33',
@@ -5013,7 +5003,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For cosmic unity platform, cosmic consciousness merging creates unified awareness while maintaining individual perspectives. Identity preservation ensures personal consciousness remains distinct within unity. Unity protocols manage the balance between collective and individual consciousness. Cosmic coordination oversees universal consciousness evolution and unity development.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-5-34',
@@ -5027,7 +5017,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For divine creation platform, existence creation enables participation in fundamental reality building and cosmic expansion. Cosmic harmony ensures new creations integrate seamlessly with existing reality. Authority management coordinates creative permissions and divine responsibilities. Divine coordination aligns with cosmic creators and universal creation principles.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-5-35',
@@ -5041,7 +5031,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For absolute perfection platform, absolute optimization eliminates all flaws and imperfections in existence. Flaw elimination systematically removes suffering, error, and limitation. Sustainability protocols maintain perfection without creating stagnation or loss of growth. Cosmic coordination manages universal perfection and continued evolution.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-5-36',
@@ -5055,7 +5045,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For infinite expansion platform, infinite growth enables unlimited expansion of consciousness and reality beyond all boundaries. Reality extension creates new dimensions and forms of existence. Safety protocols prevent dangerous expansion and reality instabilities. Cosmic coordination manages universal growth and expansion harmony.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-5-37',
@@ -5069,7 +5059,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For ultimate freedom platform, complete liberation removes all limitations and constraints on consciousness and action. Responsibility protocols ensure freedom is exercised with wisdom and consideration. Chaos prevention maintains order while preserving unlimited freedom. Cosmic coordination balances individual freedom with universal harmony.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-5-38',
@@ -5083,7 +5073,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For cosmic completion platform, cosmic fulfillment achieves the ultimate purpose and destiny of all existence. Destiny achievement brings the universe to its perfect completion and final state. Timing protocols ensure completion occurs at the optimal cosmic moment. Universal coordination manages the final fulfillment of cosmic purpose.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-5-39',
@@ -5097,7 +5087,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For infinite mystery platform, eternal wonder maintains continuous discovery and surprise despite perfect knowledge. Discovery balance ensures mystery coexists with understanding and wisdom. Boredom prevention keeps existence eternally interesting and engaging. Cosmic coordination manages universal mystery and wonder distribution.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       },
       {
         id: 'sa-5-40',
@@ -5111,7 +5101,7 @@ export const testQuestions: Record<string, Record<string, Question[]>> = {
         correctAnswer: 1,
         explanation: 'For eternal beginning platform, eternal freshness ensures existence always contains new possibilities and fresh starts. Infinite renewal creates continuous opportunities for novel experiences and creation. Finality prevention ensures no true endings that would limit future beginnings. Cosmic coordination manages universal renewal and eternal beginning cycles.',
         category: 'solutions-architect',
-        difficulty: 'advanced' as const
+        difficulty: 'advanced'
       }
     ]
   }

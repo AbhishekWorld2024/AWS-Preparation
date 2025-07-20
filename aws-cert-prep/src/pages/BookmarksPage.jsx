@@ -21,7 +21,7 @@ const BookmarksPage = () => {
     return matchesSearch && matchesCategory
   })
 
-  const getCategoryDisplayName = (category: string) => {
+  const getCategoryDisplayName = (category) => {
     switch (category) {
       case 'cloud-practitioner':
         return 'Cloud Practitioner'
@@ -32,7 +32,7 @@ const BookmarksPage = () => {
     }
   }
 
-  const getDifficultyColor = (difficulty: string) => {
+  const getDifficultyColor = (difficulty) => {
     switch (difficulty) {
       case 'beginner':
         return 'bg-green-500'
